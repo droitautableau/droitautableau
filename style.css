@@ -62,7 +62,7 @@ p { margin: 0; }
 .site-header { border-bottom: 1px solid var(--line); background: var(--bg); }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 14px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--fg); font: 600 17px var(--title); }
-.brand img { width: 36px; height: 36px; border-radius: 8px; }
+.brand img { width: 34px; height: 34px; border-radius: 50%; }
 .nav { display: flex; gap: 4px 18px; flex-wrap: wrap; }
 .nav a { color: var(--muted); text-decoration: none; font-size: 15px; padding-block: 4px; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--fg); }
@@ -75,17 +75,15 @@ main { display: block; }
 .lead { color: var(--muted); font-size: 18px; }
 .eyebrow { font: 500 13px var(--title); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 
-/* Accueil */
-.hero { padding-block: 56px 48px; }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: center; }
-.hero-text { display: grid; gap: 16px; max-width: 34rem; }
-.hero-logo { width: 200px; border-radius: 28px; }
-.hero .lead { font-size: 19px; }
-@media (max-width: 720px) {
-  .hero .wrap { grid-template-columns: 1fr; gap: 24px; }
-  .hero-logo { width: 96px; border-radius: 18px; order: -1; }
-}
-
+/* Accueil : colonne centrée façon page de liens */
+.hero { padding-block: 48px 40px; }
+.hero .wrap { display: grid; justify-items: center; text-align: center; gap: 14px; max-width: 34rem; }
+.avatar { width: 128px; height: 128px; border-radius: 50%; box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--line); }
+.hero .lead { font-size: 18px; margin-bottom: 8px; text-wrap: balance; }
+.home-courses { max-width: 720px; }
+.hero .links { width: 100%; margin-top: 0; }
+.hero .link-btn { justify-content: center; position: relative; }
+.hero .link-btn svg { position: absolute; left: 18px; }
 .links { display: grid; gap: 10px; margin-top: 8px; max-width: 30rem; }
 .link-btn {
   display: flex; align-items: center; gap: 14px; padding: 14px 18px;
@@ -161,6 +159,5 @@ button.copy { font: 500 14px var(--title); color: var(--fg); background: var(--a
 .site-footer a { color: var(--muted); }
 .course-thumb { display: block; align-self: start; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
 .more { margin-top: 24px; }
-@media (max-width: 720px) { .hero-logo { display: none; } }
 @media (max-width: 440px) { .link-btn small { display: none; } }
 .course-body .chapters + .chapters { margin-top: -4px; }

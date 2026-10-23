@@ -144,7 +144,7 @@ def page(fichier, titre, description, contenu, nav_actif=None):
 <body>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="./"><img src="img/logo.png" alt="" width="36" height="36">Droit au Tableau</a>
+    <a class="brand" href="./"><img src="img/logo-avatar.png" alt="" width="36" height="36">Droit au Tableau</a>
     <nav class="nav" aria-label="Menu principal">{nav}</nav>
   </div>
 </header>
@@ -196,16 +196,14 @@ def accueil():
     cartes = "\n".join(carte(c) for c in reversed(COURS))
     contenu = f"""<section class="hero">
   <div class="wrap">
-    <div class="hero-text">
-      <h1>Tes cours de droit, expliqués au tableau</h1>
-      <p class="lead">Un chapitre du programme par vidéo, de la L1 au master.</p>
-      {liens_reseaux()}
-    </div>
-    <img class="hero-logo" src="img/logo.png" alt="Logo Droit au Tableau : une balance de la justice" width="256" height="256">
+    <img class="avatar" src="img/logo-avatar.png" alt="Logo Droit au Tableau : une balance de la justice" width="160" height="160">
+    <h1>Droit au Tableau</h1>
+    <p class="lead">Tes cours de droit, expliqués au tableau. De la L1 au master.</p>
+    {liens_reseaux()}
   </div>
 </section>
 <section class="section">
-  <div class="wrap">
+  <div class="wrap home-courses">
     <div class="section-head">
       <h2>Derniers cours</h2>
     </div>
