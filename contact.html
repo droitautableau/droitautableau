@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · Droit au Tableau</title>
+<meta name="description" content="Contacter Droit au Tableau : questions sur les cours, suggestions de chapitres, partenariats.">
+<link rel="canonical" href="https://droitautableau.fr/contact.html">
+<meta name="theme-color" content="#1F3B33">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Droit au Tableau">
+<meta property="og:title" content="Contact · Droit au Tableau">
+<meta property="og:description" content="Contacter Droit au Tableau : questions sur les cours, suggestions de chapitres, partenariats.">
+<meta property="og:url" content="https://droitautableau.fr/contact.html">
+<meta property="og:image" content="https://droitautableau.fr/img/partage.jpg">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/logo.png" alt="" width="36" height="36">Droit au Tableau</a>
+    <nav class="nav" aria-label="Menu principal"><a href="./">Accueil</a><a href="cours.html">Les cours</a><a href="methodologie.html">Méthodologie</a><a href="contact.html" aria-current="page">Contact</a></nav>
+  </div>
+</header>
+<main>
+<section class="section">
+  <div class="wrap narrow">
+    <div class="section-head">
+      <span class="eyebrow">Contact</span>
+      <h1>Écris-moi</h1>
+      <p class="lead">Une question sur un cours, un chapitre que tu veux voir, une erreur repérée dans une vidéo : écris-moi, je lis tout.</p>
+    </div>
+    <div class="contact-box">
+      <div class="mail"><a id="mail" href="mailto:contact@droitautableau.fr">contact@droitautableau.fr</a><button class="copy" type="button" data-copy="contact@droitautableau.fr">Copier</button></div>
+      <p class="note">Partenariats et demandes professionnelles : même adresse, avec « Partenariat » dans l'objet.</p>
+    </div>
+    <p class="note" style="margin-top:24px">Pour une question de cours, tu peux aussi laisser un commentaire sous la vidéo : la réponse servira à tout le monde.</p>
+  </div>
+</section>
+<script>
+document.querySelectorAll("button.copy").forEach(function (b) {
+  b.addEventListener("click", function () {
+    navigator.clipboard.writeText(b.dataset.copy).then(function () { b.textContent = "Copié"; }, function () {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById("mail"));
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    });
+  });
+});
+</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Droit au Tableau · Les vidéos sont des supports de révision : elles ne remplacent ni ton cours ni les consignes de tes enseignants.</p>
+    <nav aria-label="Informations">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dcc2d9e8d9ec4beea6d0b43680309280"}'></script>
+</body>
+</html>

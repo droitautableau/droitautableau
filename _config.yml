@@ -1,0 +1,5 @@
+# GitHub Pages : ces fichiers ne sont pas publiés sur le site
+exclude:
+  - outils
+  - MISE-EN-LIGNE.md
+  - README.md
