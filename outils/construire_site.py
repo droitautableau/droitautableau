@@ -85,17 +85,17 @@ COURS = [
 
 METHODES = [
     {
-        "id": "fiche-arret", "titre": "La fiche d'arrêt", "niveau": "L1", "dispo": True,
+        "id": "fiche-arret", "url": "https://www.tiktok.com/@droitautableau/video/7698756874455289120", "titre": "La fiche d'arrêt", "niveau": "L1", "dispo": True,
         "resume": "La méthode étape par étape, sur un vrai arrêt de L1 : Ass. plén., 29 juin 2001 (l'enfant à naître).",
         "points": ["Les faits, la procédure, les thèses en présence", "Le problème de droit, là où on perd le plus de points", "La solution et la façon de la rédiger"],
     },
     {
-        "id": "commentaire-arret", "titre": "Le commentaire d'arrêt", "niveau": "L1", "dispo": True,
+        "id": "commentaire-arret", "url": "https://www.tiktok.com/@droitautableau/video/7699220762737003808", "titre": "Le commentaire d'arrêt", "niveau": "L1", "dispo": True,
         "resume": "Les quatre étapes du commentaire, sur un grand classique : Ass. plén., 31 mai 1991 (mères porteuses).",
         "points": ["La fiche d'arrêt, qui devient ton introduction", "Sens, valeur, portée : trouver tes idées", "Un plan qui sort de l'arrêt", "La rédaction : citer, expliquer, donner ton avis"],
     },
     {
-        "id": "code-civil", "titre": "Utiliser ton code civil en examen", "niveau": "L1", "dispo": True,
+        "id": "code-civil", "url": "https://www.tiktok.com/@droitautableau/video/7699490578131701025", "titre": "Utiliser ton code civil en examen", "niveau": "L1", "dispo": True,
         "resume": "Trois réflexes pour trouver le bon article en 30 secondes, sur un vrai sujet : le respect du corps humain.",
         "points": ["L'index alphabétique à la fin du code", "Le numéro d'article en haut des pages", "Le sommaire et les décisions résumées sous les articles", "Le piège des vieux arrêts : l'ancien article 1382 est devenu l'article 1240 en 2016"],
     },
@@ -255,7 +255,7 @@ def methodologie():
     items = []
     for m in METHODES:
         pts = "".join(f"<li>{escape(p)}</li>" for p in m["points"])
-        etat = f'<a href="{TIKTOK}" target="_blank" rel="noopener">Voir la vidéo sur TikTok</a>' if m["dispo"] else ""
+        etat = f'<a href="{m.get("url", TIKTOK)}" target="_blank" rel="noopener">Voir la vidéo sur TikTok</a>' if m["dispo"] else ""
         badge_dispo = "" if m["dispo"] else '<span class="badge soon">Bientôt</span>'
         items.append(f"""<article class="method" id="{m['id']}">
   <div class="meta"><span class="badge {m['niveau'].lower()}">{m['niveau']}</span><span class="badge methodo">Méthodologie</span>{badge_dispo}</div>
