@@ -11,6 +11,7 @@ SORTIE = Path(__file__).resolve().parent.parent  # racine du dépôt = racine du
 DOMAINE = "https://droitautableau.fr"
 YOUTUBE = "https://www.youtube.com/@DroitauTableau"
 TIKTOK = "https://www.tiktok.com/@droitautableau"
+INSTAGRAM = "https://www.instagram.com/droitautableau"
 MAIL = "contact@droitautableau.fr"
 # Jeton Cloudflare Web Analytics (tableau de bord Cloudflare > Web Analytics). Vide = pas de statistiques.
 CLOUDFLARE_TOKEN = "dcc2d9e8d9ec4beea6d0b43680309280"
@@ -20,6 +21,7 @@ ICONES = {
     "tiktok": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>',
     "livre": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h7a3 3 0 0 1 2 .8A3 3 0 0 1 15 3h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-5a2 2 0 0 0-2 2h-2a2 2 0 0 0-2-2H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v12h4a4 4 0 0 1 2 .5V6a1 1 0 0 0-1-1H5zm10 0a1 1 0 0 0-1 1v11.5a4 4 0 0 1 2-.5h3V5h-4z"/></svg>',
     "stylo": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.3 2.3a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1 0 1.4l-12 12a1 1 0 0 1-.5.3l-5 1a1 1 0 0 1-1.2-1.2l1-5a1 1 0 0 1 .3-.5l12-12zM17 4.4 5.9 15.5l-.6 3.2 3.2-.6L19.6 7 17 4.4z"/></svg>',
+    "instagram": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.3 5.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>',
     "mail": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V17h16V7.4l-7.4 5.4a1 1 0 0 1-1.2 0L4 7.4zM5.7 7l6.3 4.6L18.3 7H5.7z"/></svg>',
 }
 
@@ -35,7 +37,7 @@ COURS = [
         "matiere": "constit", "niveau": "L1",
         "titre": "L'État en droit constitutionnel : le cours complet",
         "image": "img/etat.jpg", "duree": "8:10", "date": "18 octobre 2026",
-        "url": YOUTUBE + "/videos",
+        "url": "https://youtu.be/wr3pwngFDDI",
         "resume": "Qu'est-ce qu'un État en droit ? Les trois éléments constitutifs, la reconnaissance et la personnalité morale, avec les auteurs à citer et les pièges classiques du partiel.",
         "notions": [
             "Les définitions de l'État : Carré de Malberg, Weber, Kelsen et la convention de Montevideo (1933)",
@@ -59,7 +61,7 @@ COURS = [
         "matiere": "constit", "niveau": "L1",
         "titre": "État unitaire, fédéral, confédération : le cours complet",
         "image": "img/formes-etat.jpg", "duree": "8:13", "date": "25 octobre 2026",
-        "url": YOUTUBE + "/videos",
+        "url": "https://youtu.be/i01Q7joVDEY",
         "resume": "Tout le chapitre sur les formes de l'État à partir d'un seul critère, le nombre de centres de pouvoir politique, avec les trois pièges qui tombent chaque année.",
         "notions": [
             "L'État unitaire : centralisation, déconcentration, décentralisation (art. 72 de la Constitution, lois Defferre de 1982, révision de 2003)",
@@ -151,7 +153,7 @@ def page(fichier, titre, description, contenu, nav_actif=None):
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <p>© 2026 Droit au Tableau · Les vidéos sont des supports de révision : elles ne remplacent ni ton cours ni les consignes de tes enseignants.</p>
+    <p>© 2026 Droit au Tableau</p>
     <nav aria-label="Informations">
       <a href="mentions-legales.html">Mentions légales</a>
       <a href="confidentialite.html">Confidentialité</a>
@@ -181,10 +183,11 @@ def carte(c):
 
 def liens_reseaux():
     return f"""<div class="links">
-  <a class="link-btn primary" href="{YOUTUBE}" target="_blank" rel="noopener">{ICONES['youtube']}S'abonner sur YouTube<small>cours complets</small></a>
-  <a class="link-btn" href="{TIKTOK}" target="_blank" rel="noopener">{ICONES['tiktok']}Suivre sur TikTok<small>@droitautableau</small></a>
-  <a class="link-btn" href="cours.html">{ICONES['livre']}Tous les cours<small>par matière et niveau</small></a>
-  <a class="link-btn" href="methodologie.html">{ICONES['stylo']}Méthodologie<small>fiche d'arrêt, commentaire…</small></a>
+  <a class="link-btn primary" href="{YOUTUBE}" target="_blank" rel="noopener">{ICONES['youtube']}S'abonner sur YouTube</a>
+  <a class="link-btn" href="{TIKTOK}" target="_blank" rel="noopener">{ICONES['tiktok']}Suivre sur TikTok</a>
+  <a class="link-btn" href="{INSTAGRAM}" target="_blank" rel="noopener">{ICONES['instagram']}Suivre sur Instagram</a>
+  <a class="link-btn" href="cours.html">{ICONES['livre']}Tous les cours</a>
+  <a class="link-btn" href="methodologie.html">{ICONES['stylo']}Méthodologie</a>
   <a class="link-btn" href="contact.html">{ICONES['mail']}Contact</a>
 </div>"""
 
@@ -195,7 +198,7 @@ def accueil():
   <div class="wrap">
     <div class="hero-text">
       <h1>Tes cours de droit, expliqués au tableau</h1>
-      <p class="lead">De la L1 au master, chaque vidéo reprend un chapitre du programme : les notions à connaître, les auteurs et les arrêts à citer, et les pièges classiques des examens.</p>
+      <p class="lead">Un chapitre du programme par vidéo, de la L1 au master.</p>
       {liens_reseaux()}
     </div>
     <img class="hero-logo" src="img/logo.png" alt="Logo Droit au Tableau : une balance de la justice" width="256" height="256">
@@ -204,35 +207,10 @@ def accueil():
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Derniers cours</span>
-      <h2>Les vidéos les plus récentes</h2>
+      <h2>Derniers cours</h2>
     </div>
     <div class="grid">{cartes}</div>
-    <p class="more"><a href="cours.html">Voir tous les cours et leurs résumés</a></p>
-  </div>
-</section>
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Repère</span>
-      <h2>Lire une miniature en un coup d'œil</h2>
-      <p class="lead">La couleur du fond indique le niveau, celle du bandeau indique la matière.</p>
-    </div>
-    <div class="legend">
-      <div><h3>Fond : le niveau</h3><ul>
-        <li><span class="swatch" style="background:var(--l1)"></span>L1</li>
-        <li><span class="swatch" style="background:var(--l2)"></span>L2</li>
-        <li><span class="swatch" style="background:var(--l3)"></span>L3</li>
-      </ul></div>
-      <div><h3>Bandeau : la matière</h3><ul>
-        <li><span class="swatch" style="background:var(--constit)"></span>Droit constitutionnel</li>
-        <li><span class="swatch" style="background:var(--civil)"></span>Droit civil</li>
-        <li><span class="swatch" style="background:var(--admin)"></span>Droit administratif</li>
-        <li><span class="swatch" style="background:var(--oblig)"></span>Droit des obligations</li>
-        <li><span class="swatch" style="background:var(--penal)"></span>Droit pénal général</li>
-        <li><span class="swatch" style="background:var(--societes)"></span>Droit des sociétés</li>
-      </ul></div>
-    </div>
+    <p class="more"><a href="cours.html">Tous les cours</a></p>
   </div>
 </section>"""
     page("index.html", "Droit au Tableau · Cours de droit en vidéo, de la L1 au master",
@@ -254,10 +232,8 @@ def cours():
     <div class="meta">{badges(c)}<span>{c['duree']}</span><span>{c['date']}</span></div>
     <h3>{escape(c['titre'])}</h3>
     <p>{escape(c['resume'])}</p>
-    <h4>Ce que tu dois retenir</h4>
-    <ul>{notions}</ul>
-    <p class="note">Exemples traités : {escape(c['exemples'])}.</p>
-    <details class="chapters"><summary>Les chapitres de la vidéo</summary><ol>{chap}</ol></details>
+    <details class="chapters"><summary>Ce qu'il faut retenir</summary><ul>{notions}</ul></details>
+    <details class="chapters"><summary>Les chapitres</summary><ol>{chap}</ol></details>
     <p><a href="{c['url']}" target="_blank" rel="noopener">Regarder le cours sur YouTube</a></p>
   </div>
 </article>""")
@@ -266,9 +242,8 @@ def cours():
     contenu = f"""<section class="section">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Les cours</span>
-      <h1>Tous les cours, par matière</h1>
-      <p class="lead">Chaque vidéo est un chapitre complet. Sous chacune, l'essentiel à retenir pour ta copie. De nouveaux chapitres arrivent chaque dimanche.</p>
+      <h1>Les cours</h1>
+      <p class="lead">Un nouveau chapitre chaque dimanche.</p>
     </div>
     {''.join(blocs)}
   </div>
@@ -286,15 +261,13 @@ def methodologie():
   <div class="meta"><span class="badge {m['niveau'].lower()}">{m['niveau']}</span><span class="badge methodo">Méthodologie</span>{badge_dispo}</div>
   <h3>{escape(m['titre'])}</h3>
   <p>{escape(m['resume'])}</p>
-  {f'<ul>{pts}</ul>' if pts else ''}
   {f'<p>{etat}</p>' if etat else ''}
 </article>""")
     contenu = f"""<section class="section">
   <div class="wrap narrow">
     <div class="section-head">
-      <span class="eyebrow">Méthodologie</span>
-      <h1>Les méthodes des exercices de droit</h1>
-      <p class="lead">Chaque méthode est montrée sur un vrai arrêt ou un vrai sujet, en deux minutes environ.</p>
+      <h1>Méthodologie</h1>
+      <p class="lead">Chaque méthode en deux minutes, sur un vrai arrêt.</p>
     </div>
     {''.join(items)}
   </div>
@@ -306,15 +279,13 @@ def contact():
     contenu = f"""<section class="section">
   <div class="wrap narrow">
     <div class="section-head">
-      <span class="eyebrow">Contact</span>
-      <h1>Écris-moi</h1>
-      <p class="lead">Une question sur un cours, un chapitre que tu veux voir, une erreur repérée dans une vidéo : écris-moi, je lis tout.</p>
+      <h1>Contact</h1>
+      <p class="lead">Une question, un chapitre à proposer, une erreur repérée : écris-moi.</p>
     </div>
     <div class="contact-box">
       <div class="mail"><a id="mail" href="mailto:{MAIL}">{MAIL}</a><button class="copy" type="button" data-copy="{MAIL}">Copier</button></div>
-      <p class="note">Partenariats et demandes professionnelles : même adresse, avec « Partenariat » dans l'objet.</p>
+      <p class="note">Partenariats : même adresse, objet « Partenariat ».</p>
     </div>
-    <p class="note" style="margin-top:24px">Pour une question de cours, tu peux aussi laisser un commentaire sous la vidéo : la réponse servira à tout le monde.</p>
   </div>
 </section>
 <script>
@@ -348,7 +319,7 @@ def mentions():
       <h2>Contenu pédagogique</h2>
       <p>Les vidéos et résumés sont des supports de révision. Ils ne remplacent ni ton cours ni les consignes de tes enseignants, et ne constituent pas un conseil juridique. Malgré le soin apporté, une erreur reste possible : signale-la à l'adresse ci-dessus.</p>
       <h2>Liens externes</h2>
-      <p>Le site renvoie vers YouTube et TikTok. Ces plateformes ont leurs propres conditions et leur propre politique de confidentialité.</p>
+      <p>Le site renvoie vers YouTube, TikTok et Instagram. Ces plateformes ont leurs propres conditions et leur propre politique de confidentialité.</p>
       <p class="note">Dernière mise à jour : 23 octobre 2026.</p>
     </div>
   </div>

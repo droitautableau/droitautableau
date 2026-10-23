@@ -6,15 +6,15 @@
 @font-face { font-family: "Poppins"; font-weight: 700; font-display: swap; src: url("fonts/poppins-700.woff2") format("woff2"); }
 
 :root {
-  --bg: #FBFCFB;
-  --surface: #FFFFFF;
-  --fg: #17201C;
-  --muted: #5B6862;
-  --line: #E2E7E4;
+  --bg: #EFE6D4;            /* crème du logo */
+  --surface: #F8F2E6;
+  --fg: #1F2A25;
+  --muted: #5E6A60;
+  --line: #DCD0B8;
   --accent: #1F3B33;        /* vert sapin du logo */
-  --accent-fg: #FFFFFF;
-  --accent-soft: #EEF3F0;
-  --link: #1E5B46;
+  --accent-fg: #F1E8D6;
+  --accent-soft: #E7DCC5;
+  --link: #1F3B33;
   /* code couleur des miniatures */
   --l1: #1E5B46; --l2: #1F3F78; --l3: #7A2333;
   --constit: #F28C6B; --civil: #8FC7E8; --admin: #C7A8F4; --oblig: #9EE0B8; --penal: #F5C26B; --societes: #F2A0C4;
@@ -24,14 +24,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #111614; --surface: #171D1A; --fg: #E8ECEA; --muted: #9DA9A3; --line: #2A332F;
-    --accent: #CFE3D8; --accent-fg: #111614; --accent-soft: #1D2622; --link: #9FD3B8;
+    --bg: #15201C; --surface: #1B2823; --fg: #EFE6D4; --muted: #A9B3AB; --line: #2C3A34;
+    --accent: #F1E8D6; --accent-fg: #15201C; --accent-soft: #22302A; --link: #E9DDC4;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #111614; --surface: #171D1A; --fg: #E8ECEA; --muted: #9DA9A3; --line: #2A332F;
-  --accent: #CFE3D8; --accent-fg: #111614; --accent-soft: #1D2622; --link: #9FD3B8;
+  --bg: #15201C; --surface: #1B2823; --fg: #EFE6D4; --muted: #A9B3AB; --line: #2C3A34;
+  --accent: #F1E8D6; --accent-fg: #15201C; --accent-soft: #22302A; --link: #E9DDC4;
   color-scheme: dark;
 }
 
@@ -123,6 +123,7 @@ main { display: block; }
 .course-body h4 { margin: 6px 0 0; font: 600 14px var(--title); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
 .chapters { font-size: 15px; color: var(--muted); }
 .chapters summary { cursor: pointer; color: var(--fg); font-weight: 600; }
+.chapters ul { padding: 8px 0 0 20px; margin: 0; display: grid; gap: 4px; color: var(--fg); }
 .chapters ol { list-style: none; padding: 8px 0 0; margin: 0; display: grid; gap: 2px; font-variant-numeric: tabular-nums; }
 .chapters time { display: inline-block; min-width: 3.2em; color: var(--fg); }
 @media (max-width: 760px) { .course { grid-template-columns: 1fr; gap: 16px; } }
@@ -162,3 +163,4 @@ button.copy { font: 500 14px var(--title); color: var(--fg); background: var(--a
 .more { margin-top: 24px; }
 @media (max-width: 720px) { .hero-logo { display: none; } }
 @media (max-width: 440px) { .link-btn small { display: none; } }
+.course-body .chapters + .chapters { margin-top: -4px; }
