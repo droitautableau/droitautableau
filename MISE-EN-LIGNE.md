@@ -55,13 +55,13 @@ Le site est dans le dossier `droitautableau/` (sur ton PC : `09 Site droitautabl
 
 ## Étape 5 : remplacer Linktree
 
-Mets `droitautableau.fr` dans ta bio TikTok et dans les liens de ta chaîne YouTube (Personnalisation > Infos de base > Liens).
+Mets `droitautableau.fr` dans ta bio TikTok, ta bio Instagram et les liens de ta chaîne YouTube (YouTube Studio > Personnalisation > Infos de base > Liens).
 
 ---
 
 ## Mettre le site à jour plus tard
 
-Tu me dis quelle vidéo ajouter (avec son lien YouTube). Je régénère le site, puis tu remplaces les fichiers dans GitHub (**Add file > Upload files**, glisse les fichiers modifiés, **Commit changes**). Le site se met à jour en une minute.
+Tu n'as rien à faire : dis-moi ce qu'il faut changer (une nouvelle vidéo, un lien…), je mets à jour le dépôt GitHub `droitautableau/droitautableau` et le site se met à jour tout seul en 1 à 2 minutes. Pour voir la nouvelle version : Ctrl + F5 sur ordinateur, ou recharger la page sur téléphone.
 
 ## Point juridique sur l'anonymat
 
