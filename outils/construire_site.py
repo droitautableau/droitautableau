@@ -100,9 +100,9 @@ METHODES = [
         "points": ["L'index alphabétique à la fin du code", "Le numéro d'article en haut des pages", "Le sommaire et les décisions résumées sous les articles", "Le piège des vieux arrêts : l'ancien article 1382 est devenu l'article 1240 en 2016"],
     },
     {
-        "id": "dissertation", "titre": "La dissertation juridique", "niveau": "L1", "dispo": False,
-        "resume": "La méthode complète sur un sujet de L1 : « La loi est-elle encore l'expression de la volonté générale ? »",
-        "points": [],
+        "id": "dissertation", "url": "https://www.tiktok.com/@droitautableau/video/7700161151035821334", "titre": "La dissertation juridique", "niveau": "L1", "dispo": True,
+        "resume": "La méthode complète en quatre étapes, sur un sujet de L1 : « La loi est-elle encore l'expression de la volonté générale ? »",
+        "points": ["Analyser le sujet : définir chaque mot, sans oublier le petit mot « encore »", "Trouver la problématique : la tension entre 1789 et aujourd'hui", "Un plan en deux parties qui répond à la question", "L'introduction en cinq éléments, et pas de conclusion en droit (en général)"],
     },
 ]
 
