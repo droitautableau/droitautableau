@@ -45,50 +45,81 @@
 <section class="section">
   <div class="wrap home-courses">
     <div class="section-head carousel-head">
-      <h2>Derniers cours</h2>
+      <h2>Derniers cours <span class="count">3 vidéos</span></h2>
       <div class="carousel-nav" hidden>
         <button type="button" data-dir="-1" aria-label="Vidéo précédente">‹</button>
         <button type="button" data-dir="1" aria-label="Vidéo suivante">›</button>
       </div>
     </div>
-    <div class="carousel" tabindex="0" aria-label="Derniers cours, du plus récent au plus ancien"><article class="card is-new">
-  <a class="thumb" href="https://youtu.be/K6YmtPLtcwg" target="_blank" rel="noopener"><img src="img/souverainete.jpg" alt="Miniature : Souveraineté nationale et souveraineté populaire : le cours complet" width="640" height="360" loading="lazy"></a>
-  <div class="meta"><span class="new-tag">Nouveau</span><span class="badge l1">L1</span><span class="badge matiere constit">Droit constitutionnel</span><span>8:16</span><span>25 octobre 2026</span></div>
-  <h3><a href="cours.html#souverainete">Souveraineté nationale et souveraineté populaire : le cours complet</a></h3>
+    <div class="carousel-frame">
+      <div class="carousel" tabindex="0" aria-label="Derniers cours, du plus récent au plus ancien"><article class="card">
+  <a class="thumb" href="https://youtu.be/K6YmtPLtcwg" target="_blank" rel="noopener"><img src="img/souverainete.jpg" alt="Souveraineté nationale et souveraineté populaire : le cours complet" width="640" height="360" loading="lazy"><span class="duration" aria-label="Durée 8:16">8:16</span></a>
+  <div class="meta"><span class="badge l1">L1</span><span class="badge matiere constit">Droit constitutionnel</span><span class="new-tag">Nouveau</span></div>
+  <div class="when"><time class="pub" datetime="2026-10-25T12:15:00+01:00">25 octobre 2026</time></div>
 </article>
 <article class="card">
-  <a class="thumb" href="https://youtu.be/i01Q7joVDEY" target="_blank" rel="noopener"><img src="img/formes-etat.jpg" alt="Miniature : État unitaire, fédéral, confédération : le cours complet" width="640" height="360" loading="lazy"></a>
-  <div class="meta"><span class="badge l1">L1</span><span class="badge matiere constit">Droit constitutionnel</span><span>8:13</span><span>21 octobre 2026</span></div>
-  <h3><a href="cours.html#formes-etat">État unitaire, fédéral, confédération : le cours complet</a></h3>
+  <a class="thumb" href="https://youtu.be/i01Q7joVDEY" target="_blank" rel="noopener"><img src="img/formes-etat.jpg" alt="État unitaire, fédéral, confédération : le cours complet" width="640" height="360" loading="lazy"><span class="duration" aria-label="Durée 8:13">8:13</span></a>
+  <div class="meta"><span class="badge l1">L1</span><span class="badge matiere constit">Droit constitutionnel</span></div>
+  <div class="when"><time class="pub" datetime="2026-10-21T12:00:00+02:00">21 octobre 2026</time></div>
 </article>
 <article class="card">
-  <a class="thumb" href="https://youtu.be/wr3pwngFDDI" target="_blank" rel="noopener"><img src="img/etat.jpg" alt="Miniature : L&#x27;État en droit constitutionnel : le cours complet" width="640" height="360" loading="lazy"></a>
-  <div class="meta"><span class="badge l1">L1</span><span class="badge matiere constit">Droit constitutionnel</span><span>8:10</span><span>17 octobre 2026</span></div>
-  <h3><a href="cours.html#etat">L&#x27;État en droit constitutionnel : le cours complet</a></h3>
+  <a class="thumb" href="https://youtu.be/wr3pwngFDDI" target="_blank" rel="noopener"><img src="img/etat.jpg" alt="L&#x27;État en droit constitutionnel : le cours complet" width="640" height="360" loading="lazy"><span class="duration" aria-label="Durée 8:10">8:10</span></a>
+  <div class="meta"><span class="badge l1">L1</span><span class="badge matiere constit">Droit constitutionnel</span></div>
+  <div class="when"><time class="pub" datetime="2026-10-17T12:00:00+02:00">17 octobre 2026</time></div>
 </article></div>
-    <p class="more"><a href="cours.html">Tous les cours</a></p>
+    </div>
+    <div class="carousel-dots" hidden></div>
+    <p class="more"><a class="more-btn" href="cours.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h7a3 3 0 0 1 2 .8A3 3 0 0 1 15 3h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-5a2 2 0 0 0-2 2h-2a2 2 0 0 0-2-2H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v12h4a4 4 0 0 1 2 .5V6a1 1 0 0 0-1-1H5zm10 0a1 1 0 0 0-1 1v11.5a4 4 0 0 1 2-.5h3V5h-4z"/></svg>Voir tous les cours<span class="arrow" aria-hidden="true">→</span></a></p>
   </div>
 </section>
 <script>
 (function () {
-  var piste = document.querySelector(".carousel"), nav = document.querySelector(".carousel-nav");
+  var piste = document.querySelector(".carousel"), cadre = document.querySelector(".carousel-frame"),
+      nav = document.querySelector(".carousel-nav"), points = document.querySelector(".carousel-dots");
   if (!piste || !nav) return;
+  var cartes = Array.prototype.slice.call(piste.querySelectorAll(".card"));
+  function pas() { return cartes.length > 1 ? cartes[1].offsetLeft - cartes[0].offsetLeft : piste.clientWidth; }
   nav.hidden = false;
   nav.querySelectorAll("button").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var carte = piste.querySelector(".card");
-      var pas = carte ? carte.getBoundingClientRect().width + 20 : piste.clientWidth;
-      piste.scrollBy({ left: pas * Number(b.dataset.dir), behavior: "smooth" });
-    });
+    b.addEventListener("click", function () { piste.scrollBy({ left: pas() * Number(b.dataset.dir), behavior: "smooth" }); });
   });
+  cartes.forEach(function (c, i) {
+    var d = document.createElement("button");
+    d.type = "button";
+    d.setAttribute("aria-label", "Vidéo " + (i + 1) + " sur " + cartes.length);
+    d.addEventListener("click", function () { piste.scrollTo({ left: c.offsetLeft - cartes[0].offsetLeft, behavior: "smooth" }); });
+    points.appendChild(d);
+  });
+  points.hidden = false;
   function maj() {
     var max = piste.scrollWidth - piste.clientWidth - 2;
-    nav.children[0].disabled = piste.scrollLeft <= 2;
-    nav.children[1].disabled = piste.scrollLeft >= max;
+    var debut = piste.scrollLeft <= 2, fin = piste.scrollLeft >= max;
+    nav.children[0].disabled = debut;
+    nav.children[1].disabled = fin;
+    cadre.classList.toggle("has-prev", !debut);
+    cadre.classList.toggle("has-next", !fin);
+    var actif = fin ? cartes.length - 1 : Math.round(piste.scrollLeft / pas());
+    Array.prototype.forEach.call(points.children, function (d, i) { d.setAttribute("aria-current", i === actif ? "true" : "false"); });
   }
   piste.addEventListener("scroll", maj, { passive: true });
   window.addEventListener("resize", maj);
   maj();
+})();
+</script><script>
+(function () {
+  var maintenant = new Date();
+  function jour(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime(); }
+  document.querySelectorAll("time.pub").forEach(function (t) {
+    var d = new Date(t.getAttribute("datetime"));
+    if (isNaN(d) || d > maintenant) return;
+    var ecart = Math.round((jour(maintenant) - jour(d)) / 86400000);
+    if (ecart === 0) {
+      var min = Math.floor((maintenant - d) / 60000), h = Math.floor(min / 60);
+      t.textContent = h >= 1 ? "il y a " + h + (h > 1 ? " heures" : " heure") : min >= 1 ? "il y a " + min + " min" : "à l'instant";
+    } else if (ecart === 1) {
+      t.textContent = "hier";
+    }
+  });
 })();
 </script>
 </main>

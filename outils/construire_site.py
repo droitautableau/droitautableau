@@ -30,13 +30,14 @@ MATIERES = {
     "constit": ("Droit constitutionnel", "#F28C6B"),
 }
 
+# publie = date et heure de mise en ligne (heure de Paris) : sert à afficher « il y a 3 heures » ou « hier »
 # url = lien exact de la vidéo YouTube (en attendant : la page des vidéos de la chaîne)
 COURS = [
     {
         "id": "etat",
         "matiere": "constit", "niveau": "L1",
         "titre": "L'État en droit constitutionnel : le cours complet",
-        "image": "img/etat.jpg", "duree": "8:10", "date": "17 octobre 2026",
+        "image": "img/etat.jpg", "duree": "8:10", "date": "17 octobre 2026", "publie": "2026-10-17T12:00:00+02:00",
         "url": "https://youtu.be/wr3pwngFDDI",
         "resume": "Qu'est-ce qu'un État en droit ? Les trois éléments constitutifs, la reconnaissance et la personnalité morale, avec les auteurs à citer et les pièges classiques du partiel.",
         "notions": [
@@ -60,7 +61,7 @@ COURS = [
         "id": "formes-etat",
         "matiere": "constit", "niveau": "L1",
         "titre": "État unitaire, fédéral, confédération : le cours complet",
-        "image": "img/formes-etat.jpg", "duree": "8:13", "date": "21 octobre 2026",
+        "image": "img/formes-etat.jpg", "duree": "8:13", "date": "21 octobre 2026", "publie": "2026-10-21T12:00:00+02:00",
         "url": "https://youtu.be/i01Q7joVDEY",
         "resume": "Tout le chapitre sur les formes de l'État à partir d'un seul critère, le nombre de centres de pouvoir politique, avec les trois pièges qui tombent chaque année.",
         "notions": [
@@ -85,7 +86,7 @@ COURS = [
         "id": "souverainete",
         "matiere": "constit", "niveau": "L1",
         "titre": "Souveraineté nationale et souveraineté populaire : le cours complet",
-        "image": "img/souverainete.jpg", "duree": "8:16", "date": "25 octobre 2026",
+        "image": "img/souverainete.jpg", "duree": "8:16", "date": "25 octobre 2026", "publie": "2026-10-25T12:15:00+01:00",
         "url": "https://youtu.be/K6YmtPLtcwg",
         "resume": "À qui appartient la souveraineté ? Sieyès contre Rousseau, les conséquences de chaque théorie, et la synthèse de l'article 3 de la Constitution de 1958.",
         "notions": [
@@ -205,12 +206,40 @@ def badges(c):
     return f'<span class="badge {c["niveau"].lower()}">{c["niveau"]}</span><span class="badge matiere {c["matiere"]}">{nom}</span>'
 
 
+def duree(c):
+    return f'<span class="duration" aria-label="Durée {c["duree"]}">{c["duree"]}</span>'
+
+
+def date_pub(c):
+    return f'<time class="pub" datetime="{c["publie"]}">{c["date"]}</time>'
+
+
+# Remplace la date par « il y a 3 heures » ou « hier », calculé chez le visiteur (rien à mettre à jour à la main)
+SCRIPT_DATES = """<script>
+(function () {
+  var maintenant = new Date();
+  function jour(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime(); }
+  document.querySelectorAll("time.pub").forEach(function (t) {
+    var d = new Date(t.getAttribute("datetime"));
+    if (isNaN(d) || d > maintenant) return;
+    var ecart = Math.round((jour(maintenant) - jour(d)) / 86400000);
+    if (ecart === 0) {
+      var min = Math.floor((maintenant - d) / 60000), h = Math.floor(min / 60);
+      t.textContent = h >= 1 ? "il y a " + h + (h > 1 ? " heures" : " heure") : min >= 1 ? "il y a " + min + " min" : "à l'instant";
+    } else if (ecart === 1) {
+      t.textContent = "hier";
+    }
+  });
+})();
+</script>"""
+
+
 def carte(c, nouveau=False):
     pastille = '<span class="new-tag">Nouveau</span>' if nouveau else ""
-    return f"""<article class="card{' is-new' if nouveau else ''}">
-  <a class="thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy"></a>
-  <div class="meta">{pastille}{badges(c)}<span>{c['duree']}</span><span>{c['date']}</span></div>
-  <h3><a href="cours.html#{c['id']}">{escape(c['titre'])}</a></h3>
+    return f"""<article class="card">
+  <a class="thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="{escape(c['titre'])}" width="640" height="360" loading="lazy">{duree(c)}</a>
+  <div class="meta">{badges(c)}{pastille}</div>
+  <div class="when">{date_pub(c)}</div>
 </article>"""
 
 
@@ -238,38 +267,53 @@ def accueil():
 <section class="section">
   <div class="wrap home-courses">
     <div class="section-head carousel-head">
-      <h2>Derniers cours</h2>
+      <h2>Derniers cours <span class="count">{len(COURS)} vidéos</span></h2>
       <div class="carousel-nav" hidden>
         <button type="button" data-dir="-1" aria-label="Vidéo précédente">‹</button>
         <button type="button" data-dir="1" aria-label="Vidéo suivante">›</button>
       </div>
     </div>
-    <div class="carousel" tabindex="0" aria-label="Derniers cours, du plus récent au plus ancien">{cartes}</div>
-    <p class="more"><a href="cours.html">Tous les cours</a></p>
+    <div class="carousel-frame">
+      <div class="carousel" tabindex="0" aria-label="Derniers cours, du plus récent au plus ancien">{cartes}</div>
+    </div>
+    <div class="carousel-dots" hidden></div>
+    <p class="more"><a class="more-btn" href="cours.html">{ICONES['livre']}Voir tous les cours<span class="arrow" aria-hidden="true">→</span></a></p>
   </div>
 </section>
 <script>
 (function () {{
-  var piste = document.querySelector(".carousel"), nav = document.querySelector(".carousel-nav");
+  var piste = document.querySelector(".carousel"), cadre = document.querySelector(".carousel-frame"),
+      nav = document.querySelector(".carousel-nav"), points = document.querySelector(".carousel-dots");
   if (!piste || !nav) return;
+  var cartes = Array.prototype.slice.call(piste.querySelectorAll(".card"));
+  function pas() {{ return cartes.length > 1 ? cartes[1].offsetLeft - cartes[0].offsetLeft : piste.clientWidth; }}
   nav.hidden = false;
   nav.querySelectorAll("button").forEach(function (b) {{
-    b.addEventListener("click", function () {{
-      var carte = piste.querySelector(".card");
-      var pas = carte ? carte.getBoundingClientRect().width + 20 : piste.clientWidth;
-      piste.scrollBy({{ left: pas * Number(b.dataset.dir), behavior: "smooth" }});
-    }});
+    b.addEventListener("click", function () {{ piste.scrollBy({{ left: pas() * Number(b.dataset.dir), behavior: "smooth" }}); }});
   }});
+  cartes.forEach(function (c, i) {{
+    var d = document.createElement("button");
+    d.type = "button";
+    d.setAttribute("aria-label", "Vidéo " + (i + 1) + " sur " + cartes.length);
+    d.addEventListener("click", function () {{ piste.scrollTo({{ left: c.offsetLeft - cartes[0].offsetLeft, behavior: "smooth" }}); }});
+    points.appendChild(d);
+  }});
+  points.hidden = false;
   function maj() {{
     var max = piste.scrollWidth - piste.clientWidth - 2;
-    nav.children[0].disabled = piste.scrollLeft <= 2;
-    nav.children[1].disabled = piste.scrollLeft >= max;
+    var debut = piste.scrollLeft <= 2, fin = piste.scrollLeft >= max;
+    nav.children[0].disabled = debut;
+    nav.children[1].disabled = fin;
+    cadre.classList.toggle("has-prev", !debut);
+    cadre.classList.toggle("has-next", !fin);
+    var actif = fin ? cartes.length - 1 : Math.round(piste.scrollLeft / pas());
+    Array.prototype.forEach.call(points.children, function (d, i) {{ d.setAttribute("aria-current", i === actif ? "true" : "false"); }});
   }}
   piste.addEventListener("scroll", maj, {{ passive: true }});
   window.addEventListener("resize", maj);
   maj();
 }})();
-</script>"""
+</script>""" + SCRIPT_DATES
     page("index.html", "Droit au Tableau · Cours de droit en vidéo, de la L1 au master",
          "Tes cours de droit expliqués au tableau, de la L1 au master : vidéos complètes par chapitre, résumés, auteurs et arrêts à citer, méthodologie.",
          contenu, "Accueil")
@@ -284,9 +328,9 @@ def cours():
             notions = "".join(f"<li>{escape(n)}</li>" for n in c["notions"])
             chap = "".join(f"<li><time>{t}</time> {escape(n)}</li>" for t, n in c["chapitres"])
             fiches.append(f"""<article class="course" id="{c['id']}">
-  <a class="course-thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy"></a>
+  <a class="course-thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy">{duree(c)}</a>
   <div class="course-body">
-    <div class="meta">{badges(c)}<span>{c['duree']}</span><span>{c['date']}</span></div>
+    <div class="meta">{badges(c)}{date_pub(c)}</div>
     <h3>{escape(c['titre'])}</h3>
     <p>{escape(c['resume'])}</p>
     <details class="chapters"><summary>Ce qu'il faut retenir</summary><ul>{notions}</ul></details>
@@ -304,7 +348,7 @@ def cours():
     </div>
     {''.join(blocs)}
   </div>
-</section>"""
+</section>""" + SCRIPT_DATES
     page("cours.html", "Les cours", "Tous les cours de droit de Droit au Tableau classés par matière et niveau, avec un résumé de ce qu'il faut retenir pour le partiel.", contenu, "Les cours")
 
 
