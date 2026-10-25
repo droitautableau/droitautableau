@@ -30,12 +30,11 @@ MATIERES = {
     "constit": ("Droit constitutionnel", "#F28C6B"),
 }
 
-# titre_court = titre affiché sur les cartes de l'accueil
 # publie = date et heure de mise en ligne (heure de Paris) : sert à afficher « il y a 3 heures » ou « hier »
 # url = lien exact de la vidéo YouTube (en attendant : la page des vidéos de la chaîne)
 COURS = [
     {
-        "id": "etat", "titre_court": "Composantes de l'État",
+        "id": "etat",
         "matiere": "constit", "niveau": "L1",
         "titre": "L'État en droit constitutionnel : le cours complet",
         "image": "img/etat.jpg", "duree": "8:10", "date": "17 octobre 2026", "publie": "2026-10-17T12:00:00+02:00",
@@ -59,7 +58,7 @@ COURS = [
         ],
     },
     {
-        "id": "formes-etat", "titre_court": "Formes de l'État",
+        "id": "formes-etat",
         "matiere": "constit", "niveau": "L1",
         "titre": "État unitaire, fédéral, confédération : le cours complet",
         "image": "img/formes-etat.jpg", "duree": "8:13", "date": "21 octobre 2026", "publie": "2026-10-21T12:00:00+02:00",
@@ -84,7 +83,7 @@ COURS = [
         ],
     },
     {
-        "id": "souverainete", "titre_court": "Souveraineté",
+        "id": "souverainete",
         "matiere": "constit", "niveau": "L1",
         "titre": "Souveraineté nationale et souveraineté populaire : le cours complet",
         "image": "img/souverainete.jpg", "duree": "8:16", "date": "25 octobre 2026", "publie": "2026-10-25T12:15:00+01:00",
@@ -238,10 +237,10 @@ SCRIPT_DATES = """<script>
 def carte(c, nouveau=False):
     pastille = '<span class="new-tag">Nouveau</span>' if nouveau else ""
     return f"""<article class="card">
-  <a class="thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy">{duree(c)}</a>
+  <div class="flag">{pastille}</div>
+  <a class="thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="{escape(c['titre'])}" width="640" height="360" loading="lazy">{duree(c)}</a>
   <div class="meta">{badges(c)}</div>
-  <div class="when">{pastille}{date_pub(c)}</div>
-  <h3><a href="cours.html#{c['id']}">{escape(c.get('titre_court', c['titre']))}</a></h3>
+  <div class="when">{date_pub(c)}</div>
 </article>"""
 
 

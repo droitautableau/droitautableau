@@ -187,7 +187,8 @@ button.copy { font: 500 14px var(--title); color: var(--fg); background: var(--a
 .new-tag { display: inline-flex; align-items: center; padding: 5px 9px; border-radius: 999px; background: #C8402F; color: #fff; font: 700 12px/1 var(--title); letter-spacing: .05em; text-transform: uppercase; }
 
 /* Cartes : une ligne fixe par information, la durée sur la miniature */
-.card { grid-template-rows: auto 22px 24px auto; gap: 10px; }
+.card { grid-template-rows: 24px auto 22px 20px; gap: 10px; }
+.flag { display: flex; align-items: center; }
 .card .meta { flex-wrap: nowrap; overflow: hidden; }
 .when { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; white-space: nowrap; }
 .duration { position: absolute; right: 8px; bottom: 8px; padding: 3px 6px; border-radius: 5px; background: rgba(0, 0, 0, .78); color: #fff; font: 600 12px/1.2 var(--text); font-variant-numeric: tabular-nums; }
