@@ -36,7 +36,7 @@ COURS = [
         "id": "etat",
         "matiere": "constit", "niveau": "L1",
         "titre": "L'État en droit constitutionnel : le cours complet",
-        "image": "img/etat.jpg", "duree": "8:10", "date": "18 octobre 2026",
+        "image": "img/etat.jpg", "duree": "8:10", "date": "17 octobre 2026",
         "url": "https://youtu.be/wr3pwngFDDI",
         "resume": "Qu'est-ce qu'un État en droit ? Les trois éléments constitutifs, la reconnaissance et la personnalité morale, avec les auteurs à citer et les pièges classiques du partiel.",
         "notions": [
@@ -60,7 +60,7 @@ COURS = [
         "id": "formes-etat",
         "matiere": "constit", "niveau": "L1",
         "titre": "État unitaire, fédéral, confédération : le cours complet",
-        "image": "img/formes-etat.jpg", "duree": "8:13", "date": "25 octobre 2026",
+        "image": "img/formes-etat.jpg", "duree": "8:13", "date": "21 octobre 2026",
         "url": "https://youtu.be/i01Q7joVDEY",
         "resume": "Tout le chapitre sur les formes de l'État à partir d'un seul critère, le nombre de centres de pouvoir politique, avec les trois pièges qui tombent chaque année.",
         "notions": [
@@ -85,7 +85,7 @@ COURS = [
         "id": "souverainete",
         "matiere": "constit", "niveau": "L1",
         "titre": "Souveraineté nationale et souveraineté populaire : le cours complet",
-        "image": "img/souverainete.jpg", "duree": "8:16", "date": "1er novembre 2026",
+        "image": "img/souverainete.jpg", "duree": "8:16", "date": "25 octobre 2026",
         "url": "https://youtu.be/K6YmtPLtcwg",
         "resume": "À qui appartient la souveraineté ? Sieyès contre Rousseau, les conséquences de chaque théorie, et la synthèse de l'article 3 de la Constitution de 1958.",
         "notions": [
