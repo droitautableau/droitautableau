@@ -207,9 +207,9 @@ def badges(c):
 
 def carte(c, nouveau=False):
     pastille = '<span class="new-tag">Nouveau</span>' if nouveau else ""
-    return f"""<article class="card">
-  <a class="thumb" href="{c['url']}" target="_blank" rel="noopener">{pastille}<img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy"></a>
-  <div class="meta">{badges(c)}<span>{c['duree']}</span><span>{c['date']}</span></div>
+    return f"""<article class="card{' is-new' if nouveau else ''}">
+  <a class="thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy"></a>
+  <div class="meta">{pastille}{badges(c)}<span>{c['duree']}</span><span>{c['date']}</span></div>
   <h3><a href="cours.html#{c['id']}">{escape(c['titre'])}</a></h3>
 </article>"""
 
