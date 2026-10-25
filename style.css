@@ -171,8 +171,19 @@ button.copy { font: 500 14px var(--title); color: var(--fg); background: var(--a
 .carousel-nav button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: 500 22px/1 var(--title); cursor: pointer; }
 .carousel-nav button:hover:not(:disabled) { border-color: var(--fg); }
 .carousel-nav button:disabled { opacity: .35; cursor: default; }
-.carousel { display: grid; grid-auto-flow: column; grid-auto-columns: min(82%, 340px); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 2px; padding: 3px 3px 14px; overscroll-behavior-x: contain; scrollbar-width: thin; }
+.carousel { display: grid; grid-auto-flow: column; grid-auto-columns: min(74%, 270px); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 2px; padding: 3px 3px 14px; overscroll-behavior-x: contain; scrollbar-width: thin; }
 .carousel .card { scroll-snap-align: start; }
+.carousel-head h2 { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.carousel-head .count { font: 500 15px var(--text); color: var(--muted); }
+.carousel-frame { position: relative; }
+.carousel-frame::before, .carousel-frame::after { content: ""; position: absolute; top: 0; bottom: 14px; width: 56px; pointer-events: none; opacity: 0; transition: opacity .2s; z-index: 1; }
+.carousel-frame::before { left: 0; background: linear-gradient(to right, var(--bg), transparent); }
+.carousel-frame::after { right: 0; background: linear-gradient(to left, var(--bg), transparent); }
+.carousel-frame.has-prev::before, .carousel-frame.has-next::after { opacity: 1; }
+.carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 4px; }
+.carousel-dots[hidden] { display: none; }
+.carousel-dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: var(--line); cursor: pointer; transition: width .2s, background .2s; }
+.carousel-dots button[aria-current="true"] { width: 24px; background: var(--fg); }
 .card.is-new a.thumb { border-color: #C8402F; box-shadow: 0 0 0 2px #C8402F; }
 .new-tag { display: inline-flex; align-items: center; gap: 6px; padding: 5px 9px 5px 8px; border-radius: 999px; background: #C8402F; color: #fff; font: 700 12px/1 var(--title); letter-spacing: .05em; text-transform: uppercase; }
 .new-tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #fff; }
