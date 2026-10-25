@@ -207,7 +207,7 @@ def badges(c):
 
 def carte(c, nouveau=False):
     pastille = '<span class="new-tag">Nouveau</span>' if nouveau else ""
-    return f"""<article class="card{' is-new' if nouveau else ''}">
+    return f"""<article class="card">
   <a class="thumb" href="{c['url']}" target="_blank" rel="noopener">{pastille}<img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy"></a>
   <div class="meta">{badges(c)}<span>{c['duree']}</span><span>{c['date']}</span></div>
   <h3><a href="cours.html#{c['id']}">{escape(c['titre'])}</a></h3>
@@ -237,13 +237,39 @@ def accueil():
 </section>
 <section class="section">
   <div class="wrap home-courses">
-    <div class="section-head">
+    <div class="section-head carousel-head">
       <h2>Derniers cours</h2>
+      <div class="carousel-nav" hidden>
+        <button type="button" data-dir="-1" aria-label="Vidéo précédente">‹</button>
+        <button type="button" data-dir="1" aria-label="Vidéo suivante">›</button>
+      </div>
     </div>
-    <div class="grid">{cartes}</div>
+    <div class="carousel" tabindex="0" aria-label="Derniers cours, du plus récent au plus ancien">{cartes}</div>
     <p class="more"><a href="cours.html">Tous les cours</a></p>
   </div>
-</section>"""
+</section>
+<script>
+(function () {{
+  var piste = document.querySelector(".carousel"), nav = document.querySelector(".carousel-nav");
+  if (!piste || !nav) return;
+  nav.hidden = false;
+  nav.querySelectorAll("button").forEach(function (b) {{
+    b.addEventListener("click", function () {{
+      var carte = piste.querySelector(".card");
+      var pas = carte ? carte.getBoundingClientRect().width + 20 : piste.clientWidth;
+      piste.scrollBy({{ left: pas * Number(b.dataset.dir), behavior: "smooth" }});
+    }});
+  }});
+  function maj() {{
+    var max = piste.scrollWidth - piste.clientWidth - 2;
+    nav.children[0].disabled = piste.scrollLeft <= 2;
+    nav.children[1].disabled = piste.scrollLeft >= max;
+  }}
+  piste.addEventListener("scroll", maj, {{ passive: true }});
+  window.addEventListener("resize", maj);
+  maj();
+}})();
+</script>"""
     page("index.html", "Droit au Tableau · Cours de droit en vidéo, de la L1 au master",
          "Tes cours de droit expliqués au tableau, de la L1 au master : vidéos complètes par chapitre, résumés, auteurs et arrêts à citer, méthodologie.",
          contenu, "Accueil")
