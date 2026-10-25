@@ -277,7 +277,7 @@ def accueil():
       <div class="carousel" tabindex="0" aria-label="Derniers cours, du plus récent au plus ancien">{cartes}</div>
     </div>
     <div class="carousel-dots" hidden></div>
-    <p class="more"><a href="cours.html">Tous les cours</a></p>
+    <p class="more"><a class="more-btn" href="cours.html">{ICONES['livre']}Voir tous les cours<span class="arrow" aria-hidden="true">→</span></a></p>
   </div>
 </section>
 <script>
