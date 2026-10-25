@@ -171,7 +171,7 @@ button.copy { font: 500 14px var(--title); color: var(--fg); background: var(--a
 .carousel-nav button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: 500 22px/1 var(--title); cursor: pointer; }
 .carousel-nav button:hover:not(:disabled) { border-color: var(--fg); }
 .carousel-nav button:disabled { opacity: .35; cursor: default; }
-.carousel { display: grid; grid-auto-flow: column; grid-auto-columns: min(74%, 270px); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 2px; padding: 3px 3px 14px; overscroll-behavior-x: contain; scrollbar-width: thin; }
+.carousel { display: grid; grid-auto-flow: column; grid-auto-columns: min(80%, 290px); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 2px; padding: 3px 3px 14px; overscroll-behavior-x: contain; scrollbar-width: thin; }
 .carousel .card { scroll-snap-align: start; }
 .carousel-head h2 { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .carousel-head .count { font: 500 15px var(--text); color: var(--muted); }
@@ -184,11 +184,12 @@ button.copy { font: 500 14px var(--title); color: var(--fg); background: var(--a
 .carousel-dots[hidden] { display: none; }
 .carousel-dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: var(--line); cursor: pointer; transition: width .2s, background .2s; }
 .carousel-dots button[aria-current="true"] { width: 24px; background: var(--fg); }
-.new-tag { display: inline-flex; align-items: center; padding: 5px 9px; border-radius: 999px; background: #C8402F; color: #fff; font: 700 12px/1 var(--title); letter-spacing: .05em; text-transform: uppercase; }
+.new-tag { display: inline-flex; align-items: center; padding: 5px 8px; border-radius: 999px; background: #C8402F; color: #fff; font: 700 12px/1 var(--title); letter-spacing: .05em; text-transform: uppercase; }
 
 /* Cartes : une ligne fixe par information, la durée sur la miniature */
-.card { grid-template-rows: 24px auto 22px 20px; gap: 10px; }
-.flag { display: flex; align-items: center; }
+.card { grid-template-rows: auto 22px 20px; gap: 10px; }
+.card .meta { gap: 6px; }
+.card .meta > * { flex: none; white-space: nowrap; }
 .card .meta { flex-wrap: nowrap; overflow: hidden; }
 .when { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; white-space: nowrap; }
 .duration { position: absolute; right: 8px; bottom: 8px; padding: 3px 6px; border-radius: 5px; background: rgba(0, 0, 0, .78); color: #fff; font: 600 12px/1.2 var(--text); font-variant-numeric: tabular-nums; }

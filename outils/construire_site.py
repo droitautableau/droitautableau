@@ -237,9 +237,8 @@ SCRIPT_DATES = """<script>
 def carte(c, nouveau=False):
     pastille = '<span class="new-tag">Nouveau</span>' if nouveau else ""
     return f"""<article class="card">
-  <div class="flag">{pastille}</div>
   <a class="thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="{escape(c['titre'])}" width="640" height="360" loading="lazy">{duree(c)}</a>
-  <div class="meta">{badges(c)}</div>
+  <div class="meta">{badges(c)}{pastille}</div>
   <div class="when">{date_pub(c)}</div>
 </article>"""
 
