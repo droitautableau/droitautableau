@@ -30,11 +30,12 @@ MATIERES = {
     "constit": ("Droit constitutionnel", "#F28C6B"),
 }
 
+# titre_court = titre affiché sur les cartes de l'accueil
 # publie = date et heure de mise en ligne (heure de Paris) : sert à afficher « il y a 3 heures » ou « hier »
 # url = lien exact de la vidéo YouTube (en attendant : la page des vidéos de la chaîne)
 COURS = [
     {
-        "id": "etat",
+        "id": "etat", "titre_court": "Composantes de l'État",
         "matiere": "constit", "niveau": "L1",
         "titre": "L'État en droit constitutionnel : le cours complet",
         "image": "img/etat.jpg", "duree": "8:10", "date": "17 octobre 2026", "publie": "2026-10-17T12:00:00+02:00",
@@ -58,7 +59,7 @@ COURS = [
         ],
     },
     {
-        "id": "formes-etat",
+        "id": "formes-etat", "titre_court": "Formes de l'État",
         "matiere": "constit", "niveau": "L1",
         "titre": "État unitaire, fédéral, confédération : le cours complet",
         "image": "img/formes-etat.jpg", "duree": "8:13", "date": "21 octobre 2026", "publie": "2026-10-21T12:00:00+02:00",
@@ -83,7 +84,7 @@ COURS = [
         ],
     },
     {
-        "id": "souverainete",
+        "id": "souverainete", "titre_court": "Souveraineté",
         "matiere": "constit", "niveau": "L1",
         "titre": "Souveraineté nationale et souveraineté populaire : le cours complet",
         "image": "img/souverainete.jpg", "duree": "8:16", "date": "25 octobre 2026", "publie": "2026-10-25T12:15:00+01:00",
@@ -240,7 +241,7 @@ def carte(c, nouveau=False):
   <a class="thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy">{duree(c)}</a>
   <div class="meta">{badges(c)}</div>
   <div class="when">{pastille}{date_pub(c)}</div>
-  <h3><a href="cours.html#{c['id']}">{escape(c['titre'])}</a></h3>
+  <h3><a href="cours.html#{c['id']}">{escape(c.get('titre_court', c['titre']))}</a></h3>
 </article>"""
 
 
