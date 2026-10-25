@@ -86,7 +86,7 @@ COURS = [
         "id": "souverainete",
         "matiere": "constit", "niveau": "L1",
         "titre": "Souveraineté nationale et souveraineté populaire : le cours complet",
-        "image": "img/souverainete.jpg", "duree": "8:16", "date": "25 octobre 2026", "publie": "2026-10-25T14:00:00+01:00",
+        "image": "img/souverainete.jpg", "duree": "8:16", "date": "25 octobre 2026", "publie": "2026-10-25T12:15:00+01:00",
         "url": "https://youtu.be/K6YmtPLtcwg",
         "resume": "À qui appartient la souveraineté ? Sieyès contre Rousseau, les conséquences de chaque théorie, et la synthèse de l'article 3 de la Constitution de 1958.",
         "notions": [
@@ -206,6 +206,10 @@ def badges(c):
     return f'<span class="badge {c["niveau"].lower()}">{c["niveau"]}</span><span class="badge matiere {c["matiere"]}">{nom}</span>'
 
 
+def duree(c):
+    return f'<span class="duration" aria-label="Durée {c["duree"]}">{c["duree"]}</span>'
+
+
 def date_pub(c):
     return f'<time class="pub" datetime="{c["publie"]}">{c["date"]}</time>'
 
@@ -233,8 +237,9 @@ SCRIPT_DATES = """<script>
 def carte(c, nouveau=False):
     pastille = '<span class="new-tag">Nouveau</span>' if nouveau else ""
     return f"""<article class="card">
-  <a class="thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy"></a>
-  <div class="meta">{pastille}{badges(c)}<span>{c['duree']}</span>{date_pub(c)}</div>
+  <a class="thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy">{duree(c)}</a>
+  <div class="meta">{badges(c)}</div>
+  <div class="when">{pastille}{date_pub(c)}</div>
   <h3><a href="cours.html#{c['id']}">{escape(c['titre'])}</a></h3>
 </article>"""
 
@@ -324,9 +329,9 @@ def cours():
             notions = "".join(f"<li>{escape(n)}</li>" for n in c["notions"])
             chap = "".join(f"<li><time>{t}</time> {escape(n)}</li>" for t, n in c["chapitres"])
             fiches.append(f"""<article class="course" id="{c['id']}">
-  <a class="course-thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy"></a>
+  <a class="course-thumb" href="{c['url']}" target="_blank" rel="noopener"><img src="{c['image']}" alt="Miniature : {escape(c['titre'])}" width="640" height="360" loading="lazy">{duree(c)}</a>
   <div class="course-body">
-    <div class="meta">{badges(c)}<span>{c['duree']}</span>{date_pub(c)}</div>
+    <div class="meta">{badges(c)}{date_pub(c)}</div>
     <h3>{escape(c['titre'])}</h3>
     <p>{escape(c['resume'])}</p>
     <details class="chapters"><summary>Ce qu'il faut retenir</summary><ul>{notions}</ul></details>
