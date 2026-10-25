@@ -184,8 +184,4 @@ button.copy { font: 500 14px var(--title); color: var(--fg); background: var(--a
 .carousel-dots[hidden] { display: none; }
 .carousel-dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: var(--line); cursor: pointer; transition: width .2s, background .2s; }
 .carousel-dots button[aria-current="true"] { width: 24px; background: var(--fg); }
-.card.is-new a.thumb { border-color: #C8402F; box-shadow: 0 0 0 2px #C8402F; }
-.new-tag { display: inline-flex; align-items: center; gap: 6px; padding: 5px 9px 5px 8px; border-radius: 999px; background: #C8402F; color: #fff; font: 700 12px/1 var(--title); letter-spacing: .05em; text-transform: uppercase; }
-.new-tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #fff; }
-@media (prefers-reduced-motion: no-preference) { .new-tag::before { animation: ping 1.8s ease-out infinite; } }
-@keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, .7); } 80%, 100% { box-shadow: 0 0 0 6px rgba(255, 255, 255, 0); } }
+.new-tag { display: inline-flex; align-items: center; padding: 5px 9px; border-radius: 999px; background: #C8402F; color: #fff; font: 700 12px/1 var(--title); letter-spacing: .05em; text-transform: uppercase; }
