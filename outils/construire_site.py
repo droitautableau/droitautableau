@@ -81,6 +81,33 @@ COURS = [
             ("7:03", "Récap"), ("7:25", "Conseil pour le partiel"),
         ],
     },
+    {
+        "id": "souverainete",
+        "matiere": "constit", "niveau": "L1",
+        "titre": "Souveraineté nationale et souveraineté populaire : le cours complet",
+        "image": "img/souverainete.jpg", "duree": "8:16", "date": "1er novembre 2026",
+        "url": "https://youtu.be/K6YmtPLtcwg",
+        "resume": "À qui appartient la souveraineté ? Sieyès contre Rousseau, les conséquences de chaque théorie, et la synthèse de l'article 3 de la Constitution de 1958.",
+        "notions": [
+            "Le piège de départ : souveraineté de l'État ou souveraineté dans l'État",
+            "La souveraineté nationale (Sieyès) : régime représentatif, électorat-fonction, mandat représentatif",
+            "La souveraineté populaire (Rousseau) : démocratie directe, électorat-droit, mandat impératif, référendum",
+            "Les Constitutions de 1791 et de 1793, et les limites de chaque théorie",
+            "L'article 3 de la Constitution de 1958, l'article 27 et l'interdiction du mandat impératif",
+            "Pour une copie excellente : CC 6 novembre 1962, décision Maastricht du 9 avril 1992, Carré de Malberg",
+        ],
+        "exemples": "le député de Lille, les Constitutions de 1791 et 1793",
+        "chapitres": [
+            ("0:00", "À qui appartient la souveraineté ?"), ("0:23", "Piège n° 1 : souveraineté de l'État ou dans l'État"),
+            ("0:41", "Un peu d'histoire : Bodin, 1789"), ("1:01", "La souveraineté nationale (Sieyès)"),
+            ("1:30", "Ses 4 conséquences"), ("2:24", "La souveraineté populaire (Rousseau)"),
+            ("2:46", "Ses 4 conséquences"), ("3:29", "La Constitution de 1793"),
+            ("3:49", "Les limites de chaque théorie"), ("4:26", "L'exemple du député de Lille"),
+            ("4:43", "L'article 3 de la Constitution de 1958"), ("5:08", "Ce qui vient de chaque théorie"),
+            ("6:04", "Le piège du partiel"), ("6:18", "Pour une copie excellente : 1962 et Maastricht"),
+            ("6:59", "Carré de Malberg"), ("7:12", "Récap"), ("7:39", "Conseil pour le partiel"),
+        ],
+    },
 ]
 
 METHODES = [
@@ -103,6 +130,11 @@ METHODES = [
         "id": "dissertation", "url": "https://www.tiktok.com/@droitautableau/video/7700161151035821334", "titre": "La dissertation juridique", "niveau": "L1", "dispo": True,
         "resume": "La méthode complète en quatre étapes, sur un sujet de L1 : « La loi est-elle encore l'expression de la volonté générale ? »",
         "points": ["Analyser le sujet : définir chaque mot, sans oublier le petit mot « encore »", "Trouver la problématique : la tension entre 1789 et aujourd'hui", "Un plan en deux parties qui répond à la question", "L'introduction en cinq éléments, et pas de conclusion en droit (en général)"],
+    },
+    {
+        "id": "cas-pratique", "url": "https://www.tiktok.com/@droitautableau/video/7700552377648303393", "titre": "Le cas pratique", "niveau": "L1", "dispo": True,
+        "resume": "La méthode en quatre étapes, sur un cas de L1 : Léa, 16 ans, s'achète seule un scooter à 3 000 euros. Ses parents peuvent-ils faire annuler la vente ?",
+        "points": ["Qualifier les faits avec les mots du droit", "Poser le problème de droit", "Énoncer la règle (la majeure) : articles 1146, 1148 et 1147 du code civil", "L'appliquer aux faits (la mineure) et conclure clairement"],
     },
 ]
 
@@ -265,12 +297,12 @@ def methodologie():
   <div class="wrap narrow">
     <div class="section-head">
       <h1>Méthodologie</h1>
-      <p class="lead">Chaque méthode en deux minutes, sur un vrai arrêt.</p>
+      <p class="lead">Chaque méthode en deux minutes, sur un vrai exemple.</p>
     </div>
     {''.join(items)}
   </div>
 </section>"""
-    page("methodologie.html", "Méthodologie", "Les méthodes de la fiche d'arrêt, du commentaire d'arrêt, de la dissertation et de l'utilisation du code civil en examen, montrées sur de vrais arrêts.", contenu, "Méthodologie")
+    page("methodologie.html", "Méthodologie", "Les méthodes de la fiche d'arrêt, du commentaire d'arrêt, de la dissertation, du cas pratique et de l'utilisation du code civil en examen, montrées sur de vrais exemples.", contenu, "Méthodologie")
 
 
 def contact():
