@@ -22,6 +22,7 @@ ICONES = {
     "livre": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h7a3 3 0 0 1 2 .8A3 3 0 0 1 15 3h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-5a2 2 0 0 0-2 2h-2a2 2 0 0 0-2-2H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v12h4a4 4 0 0 1 2 .5V6a1 1 0 0 0-1-1H5zm10 0a1 1 0 0 0-1 1v11.5a4 4 0 0 1 2-.5h3V5h-4z"/></svg>',
     "stylo": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.3 2.3a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1 0 1.4l-12 12a1 1 0 0 1-.5.3l-5 1a1 1 0 0 1-1.2-1.2l1-5a1 1 0 0 1 .3-.5l12-12zM17 4.4 5.9 15.5l-.6 3.2 3.2-.6L19.6 7 17 4.4z"/></svg>',
     "instagram": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.3 5.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>',
+    "journal": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h13a1 1 0 0 1 1 1v3h2a1 1 0 0 1 1 1v9a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V5a1 1 0 0 1 1-1zm1 2v12a1 1 0 0 0 1 1h10.2a3 3 0 0 1-.2-1V6H5zm13 4v8a1 1 0 0 0 2 0v-8h-2zM7 8h7v2H7V8zm0 4h7v2H7v-2zm0 4h5v2H7v-2z"/></svg>',
     "mail": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V17h16V7.4l-7.4 5.4a1 1 0 0 1-1.2 0L4 7.4zM5.7 7l6.3 4.6L18.3 7H5.7z"/></svg>',
 }
 
@@ -387,6 +388,7 @@ def liens_reseaux():
   <a class="link-btn" href="{INSTAGRAM}" target="_blank" rel="noopener">{ICONES['instagram']}Suivre sur Instagram</a>
   <a class="link-btn" href="cours.html">{ICONES['livre']}Tous les cours</a>
   <a class="link-btn" href="methodologie.html">{ICONES['stylo']}Méthodologie</a>
+  <a class="link-btn" href="actu-{ACTUS[-1]['id']}.html">{ICONES['journal']}L'actu juridique de la semaine</a>
   <a class="link-btn" href="contact.html">{ICONES['mail']}Contact</a>
 </div>"""
 
