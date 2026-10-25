@@ -44,10 +44,14 @@
 </section>
 <section class="section">
   <div class="wrap home-courses">
-    <div class="section-head">
+    <div class="section-head carousel-head">
       <h2>Derniers cours</h2>
+      <div class="carousel-nav" hidden>
+        <button type="button" data-dir="-1" aria-label="Vidéo précédente">‹</button>
+        <button type="button" data-dir="1" aria-label="Vidéo suivante">›</button>
+      </div>
     </div>
-    <div class="grid"><article class="card is-new">
+    <div class="carousel" tabindex="0" aria-label="Derniers cours, du plus récent au plus ancien"><article class="card">
   <a class="thumb" href="https://youtu.be/K6YmtPLtcwg" target="_blank" rel="noopener"><span class="new-tag">Nouveau</span><img src="img/souverainete.jpg" alt="Miniature : Souveraineté nationale et souveraineté populaire : le cours complet" width="640" height="360" loading="lazy"></a>
   <div class="meta"><span class="badge l1">L1</span><span class="badge matiere constit">Droit constitutionnel</span><span>8:16</span><span>25 octobre 2026</span></div>
   <h3><a href="cours.html#souverainete">Souveraineté nationale et souveraineté populaire : le cours complet</a></h3>
@@ -65,6 +69,28 @@
     <p class="more"><a href="cours.html">Tous les cours</a></p>
   </div>
 </section>
+<script>
+(function () {
+  var piste = document.querySelector(".carousel"), nav = document.querySelector(".carousel-nav");
+  if (!piste || !nav) return;
+  nav.hidden = false;
+  nav.querySelectorAll("button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var carte = piste.querySelector(".card");
+      var pas = carte ? carte.getBoundingClientRect().width + 20 : piste.clientWidth;
+      piste.scrollBy({ left: pas * Number(b.dataset.dir), behavior: "smooth" });
+    });
+  });
+  function maj() {
+    var max = piste.scrollWidth - piste.clientWidth - 2;
+    nav.children[0].disabled = piste.scrollLeft <= 2;
+    nav.children[1].disabled = piste.scrollLeft >= max;
+  }
+  piste.addEventListener("scroll", maj, { passive: true });
+  window.addEventListener("resize", maj);
+  maj();
+})();
+</script>
 </main>
 <footer class="site-footer">
   <div class="wrap">
