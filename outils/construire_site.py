@@ -174,12 +174,11 @@ METHODES = [
     },
 ]
 
-# Annonce temporaire en haut de l'accueil et de la page des cours. Elle disparaît d'elle-même
+# Annonce temporaire, en deuxième ligne du bouton YouTube de l'accueil. Elle disparaît d'elle-même
 # chez le visiteur à la date « fin » (heure de Paris). None = pas d'annonce.
 ANNONCE = {
     "etiquette": "Spécial galops",
-    "texte": "Cette semaine, une vidéo par jour sur YouTube pour préparer tes galops.",
-    "lien": YOUTUBE,
+    "texte": "1 vidéo par jour",
     "fin": "2026-11-02T00:00:00+01:00",
 }
 
@@ -416,17 +415,15 @@ SCRIPT_DATES = """<script>
 
 
 def annonce():
+    """Deuxième ligne du bouton « S'abonner sur YouTube », masquée chez le visiteur après la date de fin."""
     if not ANNONCE:
         return ""
     a = ANNONCE
-    return f"""<a class="annonce" href="{a['lien']}" target="_blank" rel="noopener" data-fin="{a['fin']}">
-  <span class="annonce-tag">{escape(a['etiquette'])}</span>
-  <span class="annonce-texte">{escape(a['texte'])}</span>
-</a>
+    return f"""<span class="annonce" data-fin="{a['fin']}"><span class="annonce-tag">{escape(a['etiquette'])}</span>{escape(a['texte'])}</span>
 <script>
 (function () {{
   var a = document.currentScript.previousElementSibling;
-  if (new Date() >= new Date(a.dataset.fin)) a.remove();
+  if (new Date() >= new Date(a.dataset.fin)) {{ a.parentNode.classList.remove("avec-annonce"); a.remove(); }}
 }})();
 </script>"""
 
@@ -442,7 +439,7 @@ def carte(c, nouveau=False):
 
 def liens_reseaux():
     return f"""<div class="links">
-  <a class="link-btn primary" href="{YOUTUBE}" target="_blank" rel="noopener">{ICONES['youtube']}S'abonner sur YouTube</a>
+  <a class="link-btn primary{' avec-annonce' if ANNONCE else ''}" href="{YOUTUBE}" target="_blank" rel="noopener">{ICONES['youtube']}<span>S'abonner sur YouTube</span>{annonce()}</a>
   <a class="link-btn" href="{TIKTOK}" target="_blank" rel="noopener">{ICONES['tiktok']}Suivre sur TikTok</a>
   <a class="link-btn" href="{INSTAGRAM}" target="_blank" rel="noopener">{ICONES['instagram']}Suivre sur Instagram</a>
   <a class="link-btn" href="cours.html">{ICONES['livre']}Tous les cours</a>
@@ -459,7 +456,6 @@ def accueil():
     <img class="avatar" src="img/logo.png" alt="Logo Droit au Tableau : une balance de la justice" width="160" height="160">
     <h1>Droit au Tableau</h1>
     <p class="lead">Tes cours de droit, expliqués au tableau. De la L1 au master.</p>
-    {annonce()}
     {liens_reseaux()}
   </div>
 </section>
@@ -544,7 +540,6 @@ def cours():
     <div class="section-head">
       <h1>Les cours</h1>
       <p class="lead">Un nouveau chapitre chaque dimanche.</p>
-      {annonce()}
     </div>
     {''.join(blocs)}
   </div>
