@@ -242,3 +242,13 @@ button.copy { font: 500 14px var(--title); color: var(--fg); background: var(--a
 .weeks li { display: grid; gap: 4px; padding-block: 18px; border-top: 1px solid var(--line); }
 .weeks li:first-child { border-top: 0; padding-top: 0; }
 .weeks a { font: 600 19px var(--title); }
+
+/* Annonce temporaire (ex. : spécial galops) */
+.annonce {
+  display: flex; align-items: center; gap: 12px; width: 100%; max-width: 30rem;
+  padding: 12px 16px; border: 1px solid #C8402F; border-radius: 12px; background: var(--surface);
+  color: var(--fg); text-decoration: none; text-align: left; font-size: 15px; line-height: 1.4;
+}
+.annonce:hover { border-width: 2px; padding: 11px 15px; }
+.annonce-tag { flex: none; padding: 5px 8px; border-radius: 999px; background: #C8402F; color: #fff; font: 700 12px/1 var(--title); letter-spacing: .05em; text-transform: uppercase; }
+.section-head .annonce { margin-top: 8px; }
