@@ -110,6 +110,35 @@ COURS = [
             ("6:59", "Carré de Malberg"), ("7:12", "Récap"), ("7:39", "Conseil pour le partiel"),
         ],
     },
+    {
+        "id": "constitution",
+        "matiere": "constit", "niveau": "L1",
+        "titre": "La constitution et la pyramide de Kelsen : le cours complet",
+        "image": "img/constitution.jpg", "duree": "8:46", "date": "28 octobre 2026", "publie": "2026-10-28T14:00:00+01:00",
+        "url": "https://youtu.be/5h3nESk6Ero",
+        "resume": "Qu'est-ce qu'une constitution, comment la modifier, et pourquoi elle est au sommet de la hiérarchie des normes ? De l'article 16 de la DDHC à la pyramide de Kelsen.",
+        "notions": [
+            "La définition et les deux sens : constitution matérielle et constitution formelle",
+            "Le piège du Royaume-Uni : constitution souple ou rigide",
+            "L'article 16 de la DDHC et le bloc de constitutionnalité (CC, 16 juillet 1971)",
+            "Le pouvoir constituant originaire et dérivé, l'article 89 et ses limites",
+            "Kelsen et la pyramide des normes, avec l'exemple de l'arrêté du maire",
+            "Le contrôle de constitutionnalité (a priori, QPC) et de conventionnalité (IVG 1975, Jacques Vabre, Nicolo)",
+            "Le piège du partiel : traité ou constitution, qui est au sommet ? (art. 54, Sarran, Fraisse, Costa)",
+        ],
+        "exemples": "le Royaume-Uni, l'arrêté du maire",
+        "chapitres": [
+            ("0:00", "Une loi peut disparaître en une décision"), ("0:12", "Définition de la constitution"),
+            ("0:22", "Les deux sens : matériel et formel"), ("0:51", "Piège n° 1 : le Royaume-Uni"),
+            ("1:18", "Un peu d'histoire"), ("1:46", "L'article 16 de la DDHC"),
+            ("2:02", "Une quinzaine de constitutions"), ("2:15", "Le bloc de constitutionnalité"),
+            ("2:52", "Le pouvoir constituant"), ("3:23", "L'article 89"),
+            ("4:02", "Les limites de la révision"), ("4:34", "Kelsen"),
+            ("5:09", "La pyramide des normes"), ("5:46", "L'exemple de l'arrêté du maire"),
+            ("6:04", "Qui contrôle ? Le Conseil constitutionnel"), ("6:40", "Et les traités ?"),
+            ("6:59", "Le piège du partiel"), ("7:48", "Récap"), ("8:22", "Conseil pour le partiel"),
+        ],
+    },
 ]
 
 METHODES = [
@@ -138,7 +167,20 @@ METHODES = [
         "resume": "La méthode en quatre étapes, sur un cas de L1 : Léa, 16 ans, s'achète seule un scooter à 3 000 euros. Ses parents peuvent-ils faire annuler la vente ?",
         "points": ["Qualifier les faits avec les mots du droit", "Poser le problème de droit", "Énoncer la règle (la majeure) : articles 1146, 1148 et 1147 du code civil", "L'appliquer aux faits (la mineure) et conclure clairement"],
     },
+    {
+        "id": "introduction", "url": "https://www.tiktok.com/@droitautableau/video/7701385934968818977", "titre": "L'intro qui plaît au correcteur", "niveau": "L1", "dispo": True,
+        "resume": "Les sept éléments d'une introduction de dissertation juridique, celle que le correcteur lit en premier.",
+        "points": ["L'accroche, jamais « depuis la nuit des temps »", "Les définitions et la délimitation du sujet", "Le contexte et l'intérêt du sujet", "La problématique et l'annonce du plan"],
+    },
 ]
+
+# Annonce temporaire, en deuxième ligne du bouton YouTube de l'accueil. Elle disparaît d'elle-même
+# chez le visiteur à la date « fin » (heure de Paris). None = pas d'annonce.
+ANNONCE = {
+    "etiquette": "Spécial galops",
+    "texte": "1 vidéo par jour",
+    "fin": "2026-11-02T00:00:00+01:00",
+}
 
 # L'actu juridique de la semaine : une page par semaine (la plus récente en dernier).
 # Chaque actu : matiere (clé de COULEURS_ACTU), jour (date ISO), verdict (le tampon sur la photo),
@@ -372,6 +414,20 @@ SCRIPT_DATES = """<script>
 </script>"""
 
 
+def annonce():
+    """Deuxième ligne du bouton « S'abonner sur YouTube », masquée chez le visiteur après la date de fin."""
+    if not ANNONCE:
+        return ""
+    a = ANNONCE
+    return f"""<span class="annonce" data-fin="{a['fin']}"><span class="annonce-tag">{escape(a['etiquette'])}</span>{escape(a['texte'])}</span>
+<script>
+(function () {{
+  var a = document.currentScript.previousElementSibling;
+  if (new Date() >= new Date(a.dataset.fin)) {{ a.parentNode.classList.remove("avec-annonce"); a.remove(); }}
+}})();
+</script>"""
+
+
 def carte(c, nouveau=False):
     pastille = '<span class="new-tag">Nouveau</span>' if nouveau else ""
     return f"""<article class="card">
@@ -383,7 +439,7 @@ def carte(c, nouveau=False):
 
 def liens_reseaux():
     return f"""<div class="links">
-  <a class="link-btn primary" href="{YOUTUBE}" target="_blank" rel="noopener">{ICONES['youtube']}S'abonner sur YouTube</a>
+  <a class="link-btn primary{' avec-annonce' if ANNONCE else ''}" href="{YOUTUBE}" target="_blank" rel="noopener">{ICONES['youtube']}<span>S'abonner sur YouTube</span>{annonce()}</a>
   <a class="link-btn" href="{TIKTOK}" target="_blank" rel="noopener">{ICONES['tiktok']}Suivre sur TikTok</a>
   <a class="link-btn" href="{INSTAGRAM}" target="_blank" rel="noopener">{ICONES['instagram']}Suivre sur Instagram</a>
   <a class="link-btn" href="cours.html">{ICONES['livre']}Tous les cours</a>
@@ -512,7 +568,7 @@ def methodologie():
     {''.join(items)}
   </div>
 </section>"""
-    page("methodologie.html", "Méthodologie", "Les méthodes de la fiche d'arrêt, du commentaire d'arrêt, de la dissertation, du cas pratique et de l'utilisation du code civil en examen, montrées sur de vrais exemples.", contenu, "Méthodologie")
+    page("methodologie.html", "Méthodologie", "Les méthodes de la fiche d'arrêt, du commentaire d'arrêt, de la dissertation et de son introduction, du cas pratique et de l'utilisation du code civil en examen, montrées sur de vrais exemples.", contenu, "Méthodologie")
 
 
 def insec(t):

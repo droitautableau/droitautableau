@@ -242,3 +242,11 @@ button.copy { font: 500 14px var(--title); color: var(--fg); background: var(--a
 .weeks li { display: grid; gap: 4px; padding-block: 18px; border-top: 1px solid var(--line); }
 .weeks li:first-child { border-top: 0; padding-top: 0; }
 .weeks a { font: 600 19px var(--title); }
+
+/* Annonce temporaire (ex. : spécial galops), en deuxième ligne du bouton YouTube */
+.hero .link-btn.avec-annonce { flex-direction: column; gap: 3px; padding: 12px 16px 12px 58px; }
+.hero .link-btn.avec-annonce svg { top: calc(50% - 11px); }
+.annonce { display: block; font: 500 13px var(--text); color: #F6C9BE; }
+.annonce-tag { display: inline-block; margin-right: 6px; padding: 2px 7px; border-radius: 999px; background: #C8402F; color: #fff; font: 700 11px/1.3 var(--title); letter-spacing: .05em; text-transform: uppercase; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .annonce { color: #A8392A; } }
+:root[data-theme="dark"] .annonce { color: #A8392A; }
