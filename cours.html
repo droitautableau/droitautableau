@@ -31,7 +31,13 @@
   <div class="wrap">
     <div class="section-head">
       <h1>Les cours</h1>
-      <p class="lead">Un nouveau chapitre chaque dimanche.</p>
+      <p class="lead annonce-cours" data-fin="2026-11-02T00:00:00+01:00" data-apres="Un nouveau chapitre le mercredi et le dimanche à 13 h."><span class="annonce-tag">Spécial galops</span>Une vidéo par jour sur YouTube cette semaine.</p>
+<script>
+(function () {
+  var p = document.currentScript.previousElementSibling;
+  if (new Date() >= new Date(p.dataset.fin)) { p.textContent = p.dataset.apres; p.classList.remove("annonce-cours"); }
+})();
+</script>
     </div>
     <h2 class="subject-title" style="--dot:#F28C6B">Droit constitutionnel</h2>
 <article class="course" id="etat">
