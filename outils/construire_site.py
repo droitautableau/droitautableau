@@ -174,11 +174,15 @@ METHODES = [
     },
 ]
 
-# Annonce temporaire, en deuxième ligne du bouton YouTube de l'accueil. Elle disparaît d'elle-même
+# Rythme de publication, affiché en haut de la page des cours.
+RYTHME = "Un nouveau chapitre le mercredi et le dimanche à 13 h."
+
+# Annonce temporaire, en deuxième ligne du bouton YouTube de l'accueil et à la place du rythme sur la page des cours. Elle disparaît d'elle-même
 # chez le visiteur à la date « fin » (heure de Paris). None = pas d'annonce.
 ANNONCE = {
     "etiquette": "Spécial galops",
     "texte": "1 vidéo par jour",
+    "texte_cours": "Une vidéo par jour sur YouTube cette semaine.",
     "fin": "2026-11-02T00:00:00+01:00",
 }
 
@@ -428,6 +432,20 @@ def annonce():
 </script>"""
 
 
+def rythme():
+    """Phrase sous « Les cours » : l'annonce tant qu'elle court, puis le rythme habituel (bascule chez le visiteur)."""
+    if not ANNONCE:
+        return f'<p class="lead">{escape(RYTHME)}</p>'
+    a = ANNONCE
+    return f"""<p class="lead annonce-cours" data-fin="{a['fin']}" data-apres="{escape(RYTHME)}"><span class="annonce-tag">{escape(a['etiquette'])}</span>{escape(a['texte_cours'])}</p>
+<script>
+(function () {{
+  var p = document.currentScript.previousElementSibling;
+  if (new Date() >= new Date(p.dataset.fin)) {{ p.textContent = p.dataset.apres; p.classList.remove("annonce-cours"); }}
+}})();
+</script>"""
+
+
 def carte(c, nouveau=False):
     pastille = '<span class="new-tag">Nouveau</span>' if nouveau else ""
     return f"""<article class="card">
@@ -539,7 +557,7 @@ def cours():
   <div class="wrap">
     <div class="section-head">
       <h1>Les cours</h1>
-      <p class="lead">Un nouveau chapitre chaque dimanche.</p>
+      {rythme()}
     </div>
     {''.join(blocs)}
   </div>
