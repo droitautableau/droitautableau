@@ -139,6 +139,37 @@ COURS = [
             ("6:59", "Le piège du partiel"), ("7:48", "Récap"), ("8:22", "Conseil pour le partiel"),
         ],
     },
+    {
+        "id": "separation-pouvoirs",
+        "matiere": "constit", "niveau": "L1",
+        "titre": "La séparation des pouvoirs : le cours complet",
+        "image": "img/separation-pouvoirs.jpg", "duree": "9:06", "date": "29 octobre 2026", "publie": "2026-10-29T13:00:00+01:00",
+        "url": "https://youtu.be/awwO3mYeyL8",
+        "resume": "Pourquoi faut-il séparer les pouvoirs, et qu'a vraiment écrit Montesquieu ? De Locke au fait majoritaire, avec la différence entre régime présidentiel et régime parlementaire.",
+        "notions": [
+            "Les trois fonctions de l'État et la différence entre fonction et organe",
+            "Aristote, Locke puis Montesquieu : « le pouvoir arrête le pouvoir »",
+            "Le piège : Montesquieu n'a jamais parlé de « séparation » (Eisenmann)",
+            "L'article 16 de la DDHC et l'échec de la séparation stricte de 1791",
+            "Le critère : responsabilité politique et droit de dissolution",
+            "Le régime présidentiel américain et le régime parlementaire britannique",
+            "Et la France ? Le régime semi-présidentiel, l'autorité judiciaire et le fait majoritaire",
+        ],
+        "exemples": "les États-Unis, le Royaume-Uni",
+        "chapitres": [
+            ("0:00", "Définition de la séparation des pouvoirs"), ("0:19", "Les trois fonctions de l'État"),
+            ("0:44", "Fonction ou organe ?"), ("0:58", "Aristote et Locke"),
+            ("1:26", "Montesquieu"), ("1:43", "Le pouvoir arrête le pouvoir"),
+            ("2:15", "Piège n° 1 : Montesquieu et le mot « séparation »"), ("2:30", "Eisenmann"),
+            ("2:44", "Et le juge ?"), ("2:57", "L'article 16 de la DDHC"),
+            ("3:23", "1791 : une séparation trop stricte"), ("3:55", "Le critère : responsabilité et dissolution"),
+            ("4:21", "Le régime présidentiel"), ("4:55", "Les freins et contrepoids"),
+            ("5:26", "Le régime parlementaire"), ("6:11", "Pour bien retenir : États-Unis contre Royaume-Uni"),
+            ("6:27", "Et la France ?"), ("6:54", "La conception française de la séparation des pouvoirs"),
+            ("7:24", "Pouvoir ou autorité judiciaire ?"), ("7:38", "Le fait majoritaire"),
+            ("8:02", "Récap"), ("8:38", "Conseil pour le partiel"),
+        ],
+    },
 ]
 
 METHODES = [
