@@ -112,6 +112,7 @@ main { display: block; }
 .badge.l1 { background: var(--l1); } .badge.l2 { background: var(--l2); } .badge.l3 { background: var(--l3); }
 .badge.matiere { color: #16201C; }
 .badge.constit { background: var(--constit); }
+.badge.civil { background: var(--civil); }
 .badge.methodo { background: var(--accent-soft); color: var(--fg); border: 1px solid var(--line); }
 .badge.soon { background: transparent; color: var(--muted); border: 1px dashed var(--line); }
 
