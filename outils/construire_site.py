@@ -29,6 +29,7 @@ ICONES = {
 # Matières : nom affiché, classe CSS du badge, couleur du bandeau des miniatures
 MATIERES = {
     "constit": ("Droit constitutionnel", "#F28C6B"),
+    "civil": ("Droit civil", "#8FC7E8"),
 }
 
 # publie = date et heure de mise en ligne (heure de Paris) : sert à afficher « il y a 3 heures » ou « hier »
@@ -168,6 +169,37 @@ COURS = [
             ("6:27", "Et la France ?"), ("6:54", "La conception française de la séparation des pouvoirs"),
             ("7:24", "Pouvoir ou autorité judiciaire ?"), ("7:38", "Le fait majoritaire"),
             ("8:02", "Récap"), ("8:38", "Conseil pour le partiel"),
+        ],
+    },
+    {
+        "id": "personnalite-juridique",
+        "matiere": "civil", "niveau": "L1",
+        "titre": "La personnalité juridique : le cours complet",
+        "image": "img/personnalite-juridique.jpg", "duree": "8:08", "date": "30 octobre 2026", "publie": "2026-10-30T13:00:00+01:00",
+        "url": "https://youtu.be/sgYa9bTCIQs",
+        "resume": "Quand devient-on une personne aux yeux du droit, et quand cesse-t-on de l'être ? Naître vivant et viable, l'enfant conçu, le statut du fœtus, la mort, l'absence et la disparition.",
+        "notions": [
+            "La définition : l'aptitude à être titulaire de droits et d'obligations",
+            "Personnes physiques et personnes morales",
+            "Naître vivant et viable, et le piège de l'enfant qui vit une heure",
+            "Infans conceptus : l'enfant conçu considéré comme né chaque fois que c'est dans son intérêt",
+            "L'embryon et le fœtus : protégés mais pas des personnes (Ass. plén., 29 juin 2001 ; Crim., 2 décembre 2003)",
+            "L'acte d'enfant sans vie",
+            "La mort, ce qu'elle n'efface pas et les comourants (art. 725-1)",
+            "Absence et disparition : ne pas confondre",
+        ],
+        "exemples": "",
+        "chapitres": [
+            ("0:00", "Définition de la personnalité juridique"), ("0:12", "Personnes physiques et personnes morales"),
+            ("0:21", "Les trois questions"), ("0:29", "Tout être humain est une personne"),
+            ("0:56", "Naître vivant et viable"), ("1:34", "Piège n° 1 : l'enfant qui vit une heure"),
+            ("1:53", "Infans conceptus"), ("2:37", "Les trois conditions"),
+            ("3:01", "Pour bien retenir"), ("3:26", "L'embryon et le fœtus"),
+            ("3:52", "Ass. plén., 29 juin 2001"), ("4:23", "Piège n° 2 : l'enfant né vivant"),
+            ("4:40", "L'acte d'enfant sans vie"), ("4:56", "La fin de la personnalité : la mort"),
+            ("5:14", "Ce que la mort n'efface pas"), ("5:42", "Les comourants"),
+            ("6:04", "Absence et disparition"), ("6:53", "Et si la personne revient ?"),
+            ("7:08", "Récap"), ("7:42", "Conseil pour le partiel"),
         ],
     },
 ]
