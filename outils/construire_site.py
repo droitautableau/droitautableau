@@ -202,6 +202,37 @@ COURS = [
             ("7:08", "Récap"), ("7:42", "Conseil pour le partiel"),
         ],
     },
+    {
+        "id": "etat-civil-nom",
+        "matiere": "civil", "niveau": "L1",
+        "titre": "L'état civil et le nom de famille : le cours complet",
+        "image": "img/etat-civil-nom.jpg", "duree": "8:05", "date": "31 octobre 2026", "publie": "2026-10-31T13:00:00+01:00",
+        "url": "https://youtu.be/IgvA11lUjTE",
+        "resume": "Comment le droit identifie-t-il une personne ? Les actes de l'état civil, les trois principes de l'état des personnes, le choix du nom par les parents, et les façons de changer de nom depuis la loi de 2022.",
+        "notions": [
+            "L'état civil au sens large et au sens strict",
+            "Les trois actes : naissance, mariage, décès, leur force probante et leur rectification (art. 99)",
+            "Indisponibilité, immutabilité, imprescriptibilité",
+            "Le choix du nom par les parents (art. 311-21) et le désaccord",
+            "Piège n° 1 : l'arrêt Bordas (Com., 12 mars 1985)",
+            "L'usage loyal et prolongé et l'action en usurpation de nom",
+            "Changer de nom : à la mairie (loi du 2 mars 2022) ou par décret (art. 61)",
+            "Piège n° 2 : le mariage ne change pas le nom, il donne un nom d'usage",
+            "Le pseudonyme",
+        ],
+        "exemples": "",
+        "chapitres": [
+            ("0:00", "Introduction : identifier la personne"), ("0:28", "L'état civil : deux sens"),
+            ("0:53", "Les trois actes de l'état civil"), ("1:24", "Force probante et rectification"),
+            ("1:52", "Les trois principes de l'état des personnes"), ("2:28", "Le nom : le choix des parents"),
+            ("2:59", "Pas de choix, désaccord, frères et sœurs"), ("3:15", "Filiation établie en deux temps, enfant né sous X"),
+            ("3:43", "L'immutabilité : la loi de l'an II"), ("4:00", "Piège n° 1 : l'arrêt Bordas"),
+            ("4:31", "L'imprescriptibilité et l'usage prolongé"), ("4:51", "L'action en usurpation"),
+            ("5:07", "Changer de nom : la mairie ou le décret"), ("6:00", "Piège n° 2 : le mariage et le nom d'usage"),
+            ("6:29", "Le pseudonyme"), ("6:47", "Récap"),
+            ("7:25", "Conseil pour le partiel"),
+        ],
+    },
 ]
 
 METHODES = [
