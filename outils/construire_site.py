@@ -456,7 +456,8 @@ ACTUS = [
         "actus": [
             {
                 "id": "casseurs-payeurs", "matiere": "Responsabilité civile", "jour": "2026-10-27", "verdict": "Adopté au Sénat",
-                "mot": "Casseurs-payeurs", "photo": None, "legende": "",
+                "mot": "Casseurs-payeurs", "photo": "img/actu/2026-11-01-casseurs-payeurs.jpg",
+                "legende": "Paris, 17 octobre 2026 : des pompiers éteignent une voiture incendiée en marge de la manifestation.",
                 "titre": "Le Sénat veut faire payer les casseurs, même ceux qui n'ont rien cassé",
                 "chapo": "Dix jours après les violences du 17 octobre à Paris, le Sénat adopte le projet de loi « casseurs-payeurs ». Il crée une responsabilité civile collective, plafonnée à 10 000 euros, et rend saisissables des prestations sociales.",
                 "citation": ("Il ne faut rien s'interdire. Le pacte de solidarité a été rompu.", "Gérard Larcher, président du Sénat"),
