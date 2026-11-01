@@ -320,6 +320,8 @@ ANNONCE = {
 COULEURS_ACTU = {
     "Libertés publiques": "#C7A8F4", "Droit constitutionnel": "#F28C6B", "Histoire du droit": "#F2A0C4",
     "Droit du travail": "#9EE0B8", "Institutions juridictionnelles": "#8FC7E8", "Procédure pénale": "#F5C26B",
+    "Droit pénal": "#E8908F", "Responsabilité civile": "#B8D88A", "Droit administratif": "#A9B8F0",
+    "Fonction publique": "#F2C9A0", "Droit de l'Union": "#8FD6D0",
 }
 ACTUS = [
     {
@@ -445,6 +447,132 @@ ACTUS = [
                     "L'arrêt est publié au Bulletin. Il précise la notion de fuite, et rappelle qu'on ne peut pas se soustraire à la justice pendant des années puis contester la procédure menée sans soi. Le procès peut maintenant se tenir.",
                 ],
                 "source": ("Cass. crim., 21 octobre 2026, n° 26-85.257, publié au Bulletin", "https://www.courdecassation.fr/decision/6adb185d7a102021375ed345"),
+            },
+        ],
+    },
+    {
+        "id": "2026-11-01", "numero": 2, "du": "26 octobre", "au": "1er novembre 2026", "lecture": 11,
+        "chapo": "Le Sénat veut faire payer les casseurs et vote l'imprescriptibilité des viols sur mineurs, le Conseil d'État recadre la HATVP, Bruxelles gèle les projets nationaux sur les réseaux sociaux. Les six actus de la semaine, expliquées.",
+        "actus": [
+            {
+                "id": "casseurs-payeurs", "matiere": "Responsabilité civile", "jour": "2026-10-27", "verdict": "Adopté au Sénat",
+                "mot": "Casseurs-payeurs", "photo": "img/actu/2026-11-01-casseurs-payeurs.jpg",
+                "legende": "Paris, 17 octobre 2026 : des pompiers éteignent une voiture incendiée en marge de la manifestation. Photo : Jorge Jaramillo, CC BY-SA 4.0, via Wikimedia Commons, recadrée.",
+                "titre": "Le Sénat veut faire payer les casseurs, même ceux qui n'ont rien cassé",
+                "chapo": "Dix jours après les violences du 17 octobre à Paris, le Sénat adopte le projet de loi « casseurs-payeurs ». Il crée une responsabilité civile collective, plafonnée à 10 000 euros, et rend saisissables des prestations sociales.",
+                "citation": ("Il ne faut rien s'interdire. Le pacte de solidarité a été rompu.", "Gérard Larcher, président du Sénat"),
+                "corps": [
+                    "## Qui paie les dégâts aujourd'hui ?",
+                    "Quand une manifestation dégénère, c'est d'abord l'État qui indemnise. L'article L. 211-10 du code de la sécurité intérieure le rend civilement responsable des dégâts causés par des attroupements. Il peut ensuite se retourner contre les auteurs, mais encore faut-il les identifier et prouver ce que chacun a fait. C'est la logique classique de la responsabilité civile : on répare le dommage que l'on a soi-même causé par sa faute (article 1240 du code civil).",
+                    "## Une responsabilité de groupe",
+                    "Le projet de loi change cette logique. Toute personne qui a sciemment participé à un groupement formé pour commettre des violences ou des dégradations pourrait être tenue de réparer les dommages, même sans les avoir causés elle-même, dans la limite de 10 000 euros. Pour faciliter la preuve, le Sénat a aussi assoupli l'usage des drones pendant les manifestations, ajouté une peine d'interdiction du territoire pour certains étrangers condamnés et prévu la possibilité d'interdire de manifester à des personnes identifiées comme dangereuses.",
+                    "## Le RSA et les APL pourraient être saisis",
+                    "Les prestations sociales sont en principe insaisissables, parce qu'elles servent à vivre. Le texte fait une exception pour recouvrer les dommages et intérêts : allocations familiales, aides au logement et, sur amendement des rapporteurs, RSA et prime d'activité. Un « reste à vivre » serait maintenu et le montant prélevé fixé par décret. Le texte a été adopté le 27 octobre par 229 voix contre 105.",
+                    "## Un texte contesté",
+                    "À gauche, on dénonce un texte « largement inconstitutionnel ». Pour le sénateur Fabien Gay, « plus aucune manifestation ne pourra avoir lieu dans ce pays ». Le ministre de l'Intérieur, Laurent Nuñez, a lui-même annoncé qu'il demanderait l'avis du Conseil d'État sur les ajouts du Sénat, pour vérifier que l'équilibre entre solidarité et réparation est respecté. Le texte part maintenant à l'Assemblée nationale, où le gouvernement n'a pas de majorité, et le Conseil constitutionnel devrait être saisi s'il est voté.",
+                    "Un bon exemple pour un TD de responsabilité civile : jusqu'où peut-on faire répondre quelqu'un d'un dommage qu'il n'a pas causé ? Et pour les libertés publiques : à partir de quand une mesure dissuade-t-elle de manifester ?",
+                ],
+                "source": ("Sénat, scrutin public n° 41 du 27 octobre 2026", "https://www.senat.fr/scrutin-public/2026/scr2026-41.html"),
+            },
+            {
+                "id": "imprescriptibilite", "matiere": "Droit pénal", "jour": "2026-10-28", "verdict": "Adopté au Sénat",
+                "mot": "Sans limite", "photo": "img/actu/2026-11-01-imprescriptibilite.jpg",
+                "legende": "Le palais du Luxembourg, siège du Sénat. Photo : Luis Miguel Bugallo Sánchez (Lmbuga), CC BY-SA 4.0, via Wikimedia Commons, recadrée.",
+                "titre": "Viols sur mineurs : le Sénat vote l'imprescriptibilité",
+                "chapo": "Aujourd'hui, une victime de viol dans l'enfance peut porter plainte jusqu'à ses 48 ans. Le Sénat veut supprimer toute limite. Si la mesure va au bout, ce serait le premier crime imprescriptible après les crimes contre l'humanité.",
+                "citation": None,
+                "corps": [
+                    "## Ce que dit le droit aujourd'hui",
+                    "La prescription de l'action publique, c'est le délai au-delà duquel on ne peut plus poursuivre l'auteur d'une infraction. Pour un crime, il est en principe de 20 ans (article 7 du code de procédure pénale). Pour les crimes sexuels commis sur un mineur, le délai est plus long et ne commence à courir qu'à la majorité de la victime : 30 ans depuis la loi du 3 août 2018. Une victime peut donc porter plainte jusqu'à 48 ans. Depuis la loi du 21 avril 2021, ce délai peut même être prolongé si l'auteur commet un nouveau viol sur un autre mineur : c'est la « prescription glissante ».",
+                    "## Le vote du 28 octobre",
+                    "Le Sénat examinait le projet de loi sur la protection des enfants, en première lecture. Sa commission des lois avait supprimé l'article 11 bis A, ajouté par l'Assemblée nationale le 16 juillet. En séance, les sénateurs l'ont rétabli par 252 voix contre 80, sous une forme plus étroite : seuls les crimes sexuels sur mineurs, c'est-à-dire le viol, le viol aggravé et le viol incestueux, deviendraient imprescriptibles. La version des députés allait plus loin et visait aussi d'autres crimes graves contre les enfants. Le gouvernement a soutenu la version resserrée, jugée moins exposée à une censure.",
+                    "## Les arguments pour et contre",
+                    "Pour ses défenseurs, la mesure tient compte d'une réalité : beaucoup de victimes ne parlent que des décennies plus tard, parfois après une amnésie traumatique. L'imprescriptibilité ne garantit pas une condamnation, seulement qu'une plainte pourra être examinée, avec la présomption d'innocence et les droits de la défense. Les rapporteures, Agnès Canayer et Dominique Vérien, s'y opposaient : plus le temps passe, plus les preuves s'effacent, et plus le risque d'erreur judiciaire augmente. Elles craignent aussi qu'on étende ensuite l'imprescriptibilité à d'autres crimes.",
+                    "## Et maintenant ?",
+                    "Le Sénat doit voter l'ensemble du projet de loi le mardi 3 novembre, puis une commission mixte paritaire devra trouver un texte commun aux deux chambres. Le Conseil constitutionnel sera probablement saisi. En 2019, il a jugé que la prescription n'était pas un principe fondamental reconnu par les lois de la République, mais il vérifie que les règles retenues ne sont pas manifestement inadaptées à la gravité des infractions. Dernier point à retenir : une loi qui allonge la prescription s'applique aux faits qui ne sont pas encore prescrits, jamais à ceux qui le sont déjà (article 112-2 du code pénal).",
+                    "Pour une dissertation sur la prescription, le temps et la justice pénale, ou sur la protection des mineurs, c'est l'actualité à citer cette année.",
+                ],
+                "source": ("Sénat, séance du 28 octobre 2026, art. 11 bis A du projet de loi sur la protection des enfants", "https://www.publicsenat.fr/actualites/parlementaire/protection-de-lenfance-le-senat-retablit-limprescriptibilite-des-crimes-sexuels-sur-mineurs"),
+            },
+            {
+                "id": "hatvp", "matiere": "Droit administratif", "jour": "2026-10-29", "verdict": "Annulé",
+                "mot": "HATVP", "photo": "img/actu/2026-11-01-hatvp.jpg",
+                "legende": "Le Palais-Royal, siège du Conseil d'État. Photo : Conseil d'État, via Wikimedia Commons.",
+                "titre": "La HATVP n'est pas un juge pénal",
+                "chapo": "Pour la première fois, le Conseil d'État contrôle la façon dont la Haute Autorité pour la transparence de la vie publique encadre un ministre. Il annule ses délibérations visant Éric Lombard, ancien ministre de l'Économie et ancien directeur général de la Caisse des dépôts.",
+                "citation": ("Il n'appartient pas à la HATVP de se prononcer sur l'existence d'un risque pénal.", "Conseil d'État, assemblée du contentieux, 29 octobre 2026, n° 505836"),
+                "corps": [
+                    "## Un ministre venu de la Caisse des dépôts",
+                    "Éric Lombard dirigeait la Caisse des dépôts et consignations quand il est nommé ministre de l'Économie, le 23 décembre 2024. Comme tout ministre, il remet une déclaration d'intérêts à la HATVP. En 2025, celle-ci estime qu'il ne peut pas exercer toutes ses attributions à l'égard de la Caisse et de ses filiales, notamment à cause d'un risque de prise illégale d'intérêts. Plus tard, une fois sorti du gouvernement, elle s'oppose aussi à ce qu'il siège au conseil d'administration d'une filiale, en invoquant le risque de « pantouflage ».",
+                    "## Premier point : la HATVP ne juge pas le risque pénal",
+                    "Le Premier ministre attaque la première délibération. Le Conseil d'État, réuni dans sa formation la plus solennelle, précise le rôle de la HATVP. Elle doit vérifier si les intérêts d'un ministre ont une intensité suffisante pour faire douter de son impartialité. Mais dire s'il risque de commettre une infraction, c'est le travail du seul juge pénal. Elle s'est aussi trompée en considérant que toutes les filiales de la Caisse avaient forcément des intérêts opposés à ceux de l'État : il faut regarder, au cas par cas, leur objet, leurs statuts, leur capital et leur gouvernance.",
+                    "## Second point : le pantouflage, c'est différent",
+                    "Pour le départ vers le privé, la logique est inverse. La loi charge la HATVP de contrôler le risque de pantouflage (article 432-13 du code pénal). Elle n'a pas à prouver que l'infraction serait constituée, seulement à apprécier le risque qu'elle le soit, sous le contrôle du juge administratif. Un mandat d'administrateur, même bénévole, est bien une activité lucrative. Mais ici, la HATVP n'a pas démontré que M. Lombard avait présidé la filiale en tant qu'agent public, plutôt qu'en tant que représentant de l'actionnaire. Les trois délibérations sont annulées.",
+                    "## Pourquoi c'est important",
+                    "Créée en 2013 après l'affaire Cahuzac, la HATVP est une autorité administrative indépendante. Ses décisions peuvent donc être contestées devant le juge administratif, comme n'importe quel acte administratif. Cet arrêt fixe les limites de son pouvoir : elle prévient les conflits d'intérêts, elle ne juge pas les infractions.",
+                    "À retenir pour un cours sur les autorités administratives indépendantes : indépendantes du gouvernement, oui, mais pas du juge.",
+                ],
+                "source": ("CE, Ass., 29 octobre 2026, n° 505836 et n° 514106", "https://conseil-etat.fr/actualites/prevention-des-conflits-d-interets-le-conseil-d-etat-precise-les-regles-et-l-office-de-la-haute-autorite-pour-la-transparence-de-la-vie-publique"),
+            },
+            {
+                "id": "calot", "matiere": "Fonction publique", "jour": "2026-10-27", "verdict": "Sanction annulée",
+                "mot": "Calot", "photo": "img/actu/2026-11-01-calot.jpg",
+                "legende": "L'hôpital de la Pitié-Salpêtrière, à Paris. Photo : Marie-Lan Nguyen, CC BY 2.5, via Wikimedia Commons, recadrée.",
+                "titre": "Infirmière au calot : la sanction de l'AP-HP est annulée",
+                "chapo": "Une infirmière de la Pitié-Salpêtrière refusait d'ôter le calot en tissu qu'elle portait chaque jour. L'AP-HP l'avait exclue huit mois. Le tribunal administratif de Paris juge la sanction disproportionnée.",
+                "citation": ("Un manquement à l'obligation d'obéissance hiérarchique [qui] peut faire l'objet d'une sanction disciplinaire.", "Tribunal administratif de Paris, 27 octobre 2026, cité par l'AFP"),
+                "corps": [
+                    "## Une affaire qui dure depuis un an",
+                    "Infirmière à la Pitié-Salpêtrière depuis 2018, Majdouline B. porte tous les jours un calot, ce bonnet en tissu habituellement utilisé au bloc opératoire ou en réanimation. Après plusieurs refus de l'enlever, l'AP-HP la révoque en novembre 2025. En janvier, le juge des référés suspend la révocation et elle est réintégrée. L'AP-HP la remplace alors par une exclusion temporaire de huit mois, par un arrêté du 19 janvier 2026. C'est cette sanction que le tribunal vient d'annuler.",
+                    "## Refuser un ordre reste une faute",
+                    "Le tribunal ne donne pas entièrement raison à l'infirmière. L'ordre d'enlever le calot n'était pas manifestement illégal. Or un agent public doit se conformer aux instructions de sa hiérarchie, sauf ordre manifestement illégal et de nature à compromettre gravement un intérêt public. Ses refus répétés constituaient donc bien une faute disciplinaire.",
+                    "## Mais pas une faute qui vaut huit mois",
+                    "L'AP-HP invoquait des règles d'hygiène. Le tribunal constate qu'aucune règle interne n'interdisait le calot : les recommandations du comité de lutte contre les infections demandaient seulement d'attacher les cheveux et de porter un équipement particulier dans certains services. Le risque infectieux n'était pas démontré. Au vu de son ancienneté, de l'absence de préjudice prouvé pour le service et de ses compétences jamais contestées, huit mois d'exclusion, c'était trop. Sa carrière doit être reconstituée.",
+                    "## Ce que le jugement ne tranche pas",
+                    "L'affaire a été très médiatisée, certains y voyant un signe religieux déguisé, d'autres une discrimination. Le jugement ne se prononce ni sur la neutralité religieuse ni sur la discrimination : il ne statue que sur la sanction. L'AP-HP a annoncé qu'elle faisait appel.",
+                    "C'est une illustration parfaite du contrôle de proportionnalité des sanctions disciplinaires, que le Conseil d'État exerce pleinement depuis l'arrêt Dahan de 2013 : le juge vérifie que la faute existe, puis que la sanction n'est pas trop lourde.",
+                ],
+                "source": ("TA Paris, 27 octobre 2026 (Acteurs publics, 28 octobre 2026)", "https://acteurspublics.fr/articles/port-du-calot-par-une-infirmiere-a-lhopital-le-juge-administratif-rappelle-le-principe-de-proportionnalite-des-sanctions-disciplinaires/"),
+            },
+            {
+                "id": "reseaux-sociaux", "matiere": "Droit de l'Union", "jour": "2026-10-29", "verdict": "Gel d'un an",
+                "mot": "Réseaux sociaux", "photo": "img/actu/2026-11-01-reseaux-sociaux.jpg",
+                "legende": "Le Berlaymont, siège de la Commission européenne, à Bruxelles. Photo : Fred Romero, CC BY 2.0, via Wikimedia Commons, recadrée.",
+                "titre": "Réseaux sociaux et mineurs : Bruxelles gèle les projets nationaux",
+                "chapo": "L'Autriche voulait interdire les réseaux sociaux aux moins de 14 ans. La Commission européenne répond en reportant d'au moins un an tout projet national de ce type, le temps d'adopter une règle commune.",
+                "citation": ("Tous les enfants dans l'UE méritent le même niveau de sécurité en ligne.", "Thomas Regnier, porte-parole de la Commission européenne"),
+                "corps": [
+                    "## Pourquoi Bruxelles peut bloquer une loi nationale",
+                    "Un État qui veut adopter une règle technique touchant aux services en ligne doit d'abord la notifier à la Commission, en vertu de la directive (UE) 2015/1535. Pendant ce temps, il ne peut pas l'adopter : c'est la période de « statu quo ». Elle dure normalement trois mois, mais elle peut aller jusqu'à douze mois quand la Commission annonce qu'elle va proposer une législation européenne sur le même sujet. C'est ce qu'elle a fait le 29 octobre, après la notification autrichienne.",
+                    "## Le « Kids Act » en préparation",
+                    "La Commission a présenté mi-septembre un projet de texte sur la protection des enfants en ligne, surnommé « Kids Act ». Il doit encore être adopté dans les mêmes termes par le Parlement européen et par le Conseil, qui réunit les 27 États. Bruxelles veut éviter que chaque pays fixe son propre âge minimum : des règles différentes d'un État à l'autre seraient, selon elle, impossibles à faire respecter pour des plateformes qui opèrent partout dans l'Union.",
+                    "## Et la France ?",
+                    "Le Parlement avait voté cet été une loi interdisant les réseaux sociaux aux moins de 15 ans. Le Conseil constitutionnel l'a censurée le 14 août (décision n° 2026-911 DC) : l'interdiction portait « une atteinte disproportionnée à la liberté d'expression et de communication », parce qu'elle était indifférenciée et obligeait tous les internautes, majeurs compris, à prouver leur âge sans garanties suffisantes. Emmanuel Macron a promis un nouveau texte « juridiquement robuste » pour le printemps 2027. Selon l'AFP, la France ne devrait pas être concernée par le gel, car elle avait notifié son projet avant la présentation du Kids Act, mais ce point reste incertain.",
+                    "## Une question de compétence",
+                    "Derrière ce gel, il y a une question classique de droit de l'Union : qui est compétent ? Les plateformes relèvent déjà du règlement sur les services numériques (DSA), qui impose une protection renforcée des mineurs. Plus l'Union légifère sur un sujet, moins les États peuvent adopter leurs propres règles.",
+                    "Un bon exemple pour illustrer l'harmonisation du marché intérieur, et la façon dont le droit européen encadre le pouvoir du législateur national.",
+                ],
+                "source": ("Commission européenne, annonce du 29 octobre 2026 (Le Club des juristes)", "https://www.leclubdesjuristes.com/en-bref/la-commission-europeenne-gele-toute-legislation-nationale-visant-a-interdire-les-reseaux-sociaux-aux-mineurs-18128/"),
+            },
+            {
+                "id": "philippe", "matiere": "Procédure pénale", "jour": "2026-10-29", "verdict": "Témoin assisté",
+                "mot": "Témoin assisté", "photo": "img/actu/2026-11-01-philippe.jpg",
+                "legende": "Édouard Philippe en 2017, alors Premier ministre. Photo : Nicolas Richoffer, CC BY-SA 4.0, via Wikimedia Commons, recadrée.",
+                "titre": "Édouard Philippe : témoin assisté, pas mis en examen",
+                "chapo": "Entendu toute une journée par deux juges d'instruction sur des soupçons de détournement de fonds publics au Havre, l'ancien Premier ministre ressort avec le statut de témoin assisté. Un statut intermédiaire, qu'il faut savoir distinguer de la mise en examen.",
+                "citation": ("Edouard Philippe se félicite de cette décision favorable qui confirme qu'il n'y a rien à lui reprocher dans cette affaire.", "Emmanuel Marsigny, avocat d'Édouard Philippe"),
+                "corps": [
+                    "## L'affaire de la Cité numérique",
+                    "En juillet 2020, la communauté urbaine du Havre, présidée par Édouard Philippe, signe une convention avec l'association LH French Tech pour animer la Cité numérique de la ville, avec 2,154 millions d'euros de compensation. Une ancienne directrice générale adjointe alerte le Parquet national financier en 2023, puis porte plainte avec constitution de partie civile en 2025. Elle évoque un détournement de fonds publics, du favoritisme et une prise illégale d'intérêts. Une information judiciaire a été ouverte en mai 2026. Ces faits sont contestés et restent à établir.",
+                    "## Le 29 octobre, devant les juges",
+                    "Édouard Philippe a été entendu toute la journée par deux juges d'instruction financiers. À l'issue, il est placé sous le statut de témoin assisté, que son avocat qualifie de « décision favorable ». L'avocat de la plaignante, lui, rappelle que l'enquête continue.",
+                    "## Témoin assisté ou mis en examen ?",
+                    "Le témoin assisté (articles 113-1 et suivants du code de procédure pénale) est entre le simple témoin et le mis en examen. Une personne visée nommément par une plainte avec constitution de partie civile peut être entendue sous ce statut, tout comme celle contre qui il existe des indices rendant vraisemblable sa participation aux faits. Elle a droit à un avocat et accès au dossier. La mise en examen, elle, suppose des « indices graves ou concordants » (article 80-1). Elle seule permet un contrôle judiciaire, une détention provisoire ou un renvoi devant le tribunal.",
+                    "## Ce n'est pas un non-lieu",
+                    "Le statut de témoin assisté n'est pas définitif : si de nouveaux éléments apparaissent, les juges peuvent mettre la personne en examen plus tard (article 113-8). Mais tant qu'il reste témoin assisté, Édouard Philippe ne peut pas être renvoyé devant un tribunal dans cette affaire. Et dans tous les cas, il reste présumé innocent.",
+                    "Retiens la différence : le témoin assisté a les droits d'une partie, sans les contraintes du mis en examen. Une question qui tombe souvent en procédure pénale.",
+                ],
+                "source": ("Information judiciaire ouverte en mai 2026, audition du 29 octobre 2026 (Journal du Net)", "https://www.journaldunet.com/business/action-publique/1557387-edouard-philippe-a-ete-place-sous-le-statut-de-temoin-assiste/"),
             },
         ],
     },
@@ -741,6 +869,21 @@ def visuel(a, classe):
     return f'<div class="{classe} plain" style="--c:{COULEURS_ACTU[a["matiere"]]}"><span class="word">{insec(a["mot"])}</span>{tampon}</div>'
 
 
+LICENCES = {
+    "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0/deed.fr",
+    "CC BY-SA 3.0": "https://creativecommons.org/licenses/by-sa/3.0/deed.fr",
+    "CC BY 2.5": "https://creativecommons.org/licenses/by/2.5/deed.fr",
+    "CC BY 2.0": "https://creativecommons.org/licenses/by/2.0/deed.fr",
+}
+
+
+def licences(t):
+    """Fait pointer chaque mention de licence Creative Commons d'une légende vers son texte."""
+    for nom, url in LICENCES.items():
+        t = t.replace(nom, f'<a href="{url}" target="_blank" rel="noopener license">{nom}</a>')
+    return t
+
+
 def actu_semaine(s):
     titre = f"L'actu juridique du {s['du']} au {s['au']}"
     tuiles = "".join(f"""<a class="tile" href="#{a['id']}">{visuel(a, 'tile-img')}<span class="tile-t">{insec(a['titre'])}</span></a>""" for a in s["actus"])
@@ -754,7 +897,7 @@ def actu_semaine(s):
             if k == 2 and citation:
                 corps.append(citation)
             corps.append(f"<h3>{insec(para[3:])}</h3>" if para.startswith("## ") else f"<p>{insec(para)}</p>")
-        legende = f'<figcaption>{insec(a["legende"])}</figcaption>' if a["photo"] and a["legende"] else ""
+        legende = f'<figcaption>{licences(insec(a["legende"]))}</figcaption>' if a["photo"] and a["legende"] else ""
         blocs.append(f"""<article class="news" id="{a['id']}">
   <figure>{visuel(a, 'news-img')}{legende}</figure>
   <div class="meta"><span class="news-num">{i}</span><span class="badge matiere" style="background:{COULEURS_ACTU[a['matiere']]}">{insec(a['matiere'])}</span><span>{date_fr(a['jour'])}</span></div>
