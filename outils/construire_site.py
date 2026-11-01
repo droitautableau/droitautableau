@@ -457,7 +457,7 @@ ACTUS = [
             {
                 "id": "casseurs-payeurs", "matiere": "Responsabilité civile", "jour": "2026-10-27", "verdict": "Adopté au Sénat",
                 "mot": "Casseurs-payeurs", "photo": "img/actu/2026-11-01-casseurs-payeurs.jpg",
-                "legende": "Paris, 17 octobre 2026 : des pompiers éteignent une voiture incendiée en marge de la manifestation.",
+                "legende": "Paris, 17 octobre 2026 : des pompiers éteignent une voiture incendiée en marge de la manifestation. Photo : Jorge Jaramillo, CC BY-SA 4.0, via Wikimedia Commons, recadrée.",
                 "titre": "Le Sénat veut faire payer les casseurs, même ceux qui n'ont rien cassé",
                 "chapo": "Dix jours après les violences du 17 octobre à Paris, le Sénat adopte le projet de loi « casseurs-payeurs ». Il crée une responsabilité civile collective, plafonnée à 10 000 euros, et rend saisissables des prestations sociales.",
                 "citation": ("Il ne faut rien s'interdire. Le pacte de solidarité a été rompu.", "Gérard Larcher, président du Sénat"),
@@ -869,6 +869,21 @@ def visuel(a, classe):
     return f'<div class="{classe} plain" style="--c:{COULEURS_ACTU[a["matiere"]]}"><span class="word">{insec(a["mot"])}</span>{tampon}</div>'
 
 
+LICENCES = {
+    "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0/deed.fr",
+    "CC BY-SA 3.0": "https://creativecommons.org/licenses/by-sa/3.0/deed.fr",
+    "CC BY 2.5": "https://creativecommons.org/licenses/by/2.5/deed.fr",
+    "CC BY 2.0": "https://creativecommons.org/licenses/by/2.0/deed.fr",
+}
+
+
+def licences(t):
+    """Fait pointer chaque mention de licence Creative Commons d'une légende vers son texte."""
+    for nom, url in LICENCES.items():
+        t = t.replace(nom, f'<a href="{url}" target="_blank" rel="noopener license">{nom}</a>')
+    return t
+
+
 def actu_semaine(s):
     titre = f"L'actu juridique du {s['du']} au {s['au']}"
     tuiles = "".join(f"""<a class="tile" href="#{a['id']}">{visuel(a, 'tile-img')}<span class="tile-t">{insec(a['titre'])}</span></a>""" for a in s["actus"])
@@ -882,7 +897,7 @@ def actu_semaine(s):
             if k == 2 and citation:
                 corps.append(citation)
             corps.append(f"<h3>{insec(para[3:])}</h3>" if para.startswith("## ") else f"<p>{insec(para)}</p>")
-        legende = f'<figcaption>{insec(a["legende"])}</figcaption>' if a["photo"] and a["legende"] else ""
+        legende = f'<figcaption>{licences(insec(a["legende"]))}</figcaption>' if a["photo"] and a["legende"] else ""
         blocs.append(f"""<article class="news" id="{a['id']}">
   <figure>{visuel(a, 'news-img')}{legende}</figure>
   <div class="meta"><span class="news-num">{i}</span><span class="badge matiere" style="background:{COULEURS_ACTU[a['matiere']]}">{insec(a['matiere'])}</span><span>{date_fr(a['jour'])}</span></div>
