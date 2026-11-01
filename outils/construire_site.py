@@ -452,7 +452,7 @@ ACTUS = [
     },
     {
         "id": "2026-11-01", "numero": 2, "du": "26 octobre", "au": "1er novembre 2026", "lecture": 11,
-        "chapo": "Le Sénat veut faire payer les casseurs et vote l'imprescriptibilité des viols sur mineurs, le Conseil d'État recadre la HATVP, Bruxelles gèle les lois nationales sur les réseaux sociaux. Les six actus de la semaine, expliquées.",
+        "chapo": "Le Sénat veut faire payer les casseurs et vote l'imprescriptibilité des viols sur mineurs, le Conseil d'État recadre la HATVP, Bruxelles gèle les projets nationaux sur les réseaux sociaux. Les six actus de la semaine, expliquées.",
         "actus": [
             {
                 "id": "casseurs-payeurs", "matiere": "Responsabilité civile", "jour": "2026-10-27", "verdict": "Adopté au Sénat",
@@ -484,7 +484,7 @@ ACTUS = [
                     "## Ce que dit le droit aujourd'hui",
                     "La prescription de l'action publique, c'est le délai au-delà duquel on ne peut plus poursuivre l'auteur d'une infraction. Pour un crime, il est en principe de 20 ans (article 7 du code de procédure pénale). Pour les crimes sexuels commis sur un mineur, le délai est plus long et ne commence à courir qu'à la majorité de la victime : 30 ans depuis la loi du 3 août 2018. Une victime peut donc porter plainte jusqu'à 48 ans. Depuis la loi du 21 avril 2021, ce délai peut même être prolongé si l'auteur commet un nouveau viol sur un autre mineur : c'est la « prescription glissante ».",
                     "## Le vote du 28 octobre",
-                    "Le Sénat examinait le projet de loi sur la protection des enfants. Sa commission des lois avait supprimé l'article 11 bis A, ajouté par l'Assemblée nationale le 16 juillet. En séance, les sénateurs l'ont rétabli par 252 voix contre 80, sous une forme plus étroite : seuls les crimes sexuels sur mineurs, c'est-à-dire le viol, le viol aggravé et le viol incestueux, deviendraient imprescriptibles. La version des députés allait plus loin et visait aussi d'autres crimes graves contre les enfants. Le gouvernement a soutenu la version resserrée, jugée moins exposée à une censure.",
+                    "Le Sénat examinait le projet de loi sur la protection des enfants, en première lecture. Sa commission des lois avait supprimé l'article 11 bis A, ajouté par l'Assemblée nationale le 16 juillet. En séance, les sénateurs l'ont rétabli par 252 voix contre 80, sous une forme plus étroite : seuls les crimes sexuels sur mineurs, c'est-à-dire le viol, le viol aggravé et le viol incestueux, deviendraient imprescriptibles. La version des députés allait plus loin et visait aussi d'autres crimes graves contre les enfants. Le gouvernement a soutenu la version resserrée, jugée moins exposée à une censure.",
                     "## Les arguments pour et contre",
                     "Pour ses défenseurs, la mesure tient compte d'une réalité : beaucoup de victimes ne parlent que des décennies plus tard, parfois après une amnésie traumatique. L'imprescriptibilité ne garantit pas une condamnation, seulement qu'une plainte pourra être examinée, avec la présomption d'innocence et les droits de la défense. Les rapporteures, Agnès Canayer et Dominique Vérien, s'y opposaient : plus le temps passe, plus les preuves s'effacent, et plus le risque d'erreur judiciaire augmente. Elles craignent aussi qu'on étende ensuite l'imprescriptibilité à d'autres crimes.",
                     "## Et maintenant ?",
@@ -534,7 +534,7 @@ ACTUS = [
             {
                 "id": "reseaux-sociaux", "matiere": "Droit de l'Union", "jour": "2026-10-29", "verdict": "Gel d'un an",
                 "mot": "Réseaux sociaux", "photo": None, "legende": "",
-                "titre": "Réseaux sociaux et mineurs : Bruxelles gèle les lois nationales",
+                "titre": "Réseaux sociaux et mineurs : Bruxelles gèle les projets nationaux",
                 "chapo": "L'Autriche voulait interdire les réseaux sociaux aux moins de 14 ans. La Commission européenne répond en reportant d'au moins un an tout projet national de ce type, le temps d'adopter une règle commune.",
                 "citation": ("Tous les enfants dans l'UE méritent le même niveau de sécurité en ligne.", "Thomas Regnier, porte-parole de la Commission européenne"),
                 "corps": [
