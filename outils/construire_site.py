@@ -476,7 +476,8 @@ ACTUS = [
             },
             {
                 "id": "imprescriptibilite", "matiere": "Droit pénal", "jour": "2026-10-28", "verdict": "Adopté au Sénat",
-                "mot": "Sans limite", "photo": None, "legende": "",
+                "mot": "Sans limite", "photo": "img/actu/2026-11-01-imprescriptibilite.jpg",
+                "legende": "Le palais du Luxembourg, siège du Sénat. Photo : Luis Miguel Bugallo Sánchez (Lmbuga), CC BY-SA 4.0, via Wikimedia Commons, recadrée.",
                 "titre": "Viols sur mineurs : le Sénat vote l'imprescriptibilité",
                 "chapo": "Aujourd'hui, une victime de viol dans l'enfance peut porter plainte jusqu'à ses 48 ans. Le Sénat veut supprimer toute limite. Si la mesure va au bout, ce serait le premier crime imprescriptible après les crimes contre l'humanité.",
                 "citation": None,
@@ -495,7 +496,8 @@ ACTUS = [
             },
             {
                 "id": "hatvp", "matiere": "Droit administratif", "jour": "2026-10-29", "verdict": "Annulé",
-                "mot": "HATVP", "photo": None, "legende": "",
+                "mot": "HATVP", "photo": "img/actu/2026-11-01-hatvp.jpg",
+                "legende": "Le Palais-Royal, siège du Conseil d'État. Photo : Conseil d'État, via Wikimedia Commons.",
                 "titre": "La HATVP n'est pas un juge pénal",
                 "chapo": "Pour la première fois, le Conseil d'État contrôle la façon dont la Haute Autorité pour la transparence de la vie publique encadre un ministre. Il annule ses délibérations visant Éric Lombard, ancien ministre de l'Économie et ancien directeur général de la Caisse des dépôts.",
                 "citation": ("Il n'appartient pas à la HATVP de se prononcer sur l'existence d'un risque pénal.", "Conseil d'État, assemblée du contentieux, 29 octobre 2026, n° 505836"),
@@ -514,7 +516,8 @@ ACTUS = [
             },
             {
                 "id": "calot", "matiere": "Fonction publique", "jour": "2026-10-27", "verdict": "Sanction annulée",
-                "mot": "Calot", "photo": None, "legende": "",
+                "mot": "Calot", "photo": "img/actu/2026-11-01-calot.jpg",
+                "legende": "L'hôpital de la Pitié-Salpêtrière, à Paris. Photo : Marie-Lan Nguyen, CC BY 2.5, via Wikimedia Commons, recadrée.",
                 "titre": "Infirmière au calot : la sanction de l'AP-HP est annulée",
                 "chapo": "Une infirmière de la Pitié-Salpêtrière refusait d'ôter le calot en tissu qu'elle portait chaque jour. L'AP-HP l'avait exclue huit mois. Le tribunal administratif de Paris juge la sanction disproportionnée.",
                 "citation": ("Un manquement à l'obligation d'obéissance hiérarchique [qui] peut faire l'objet d'une sanction disciplinaire.", "Tribunal administratif de Paris, 27 octobre 2026, cité par l'AFP"),
@@ -533,7 +536,8 @@ ACTUS = [
             },
             {
                 "id": "reseaux-sociaux", "matiere": "Droit de l'Union", "jour": "2026-10-29", "verdict": "Gel d'un an",
-                "mot": "Réseaux sociaux", "photo": None, "legende": "",
+                "mot": "Réseaux sociaux", "photo": "img/actu/2026-11-01-reseaux-sociaux.jpg",
+                "legende": "Le Berlaymont, siège de la Commission européenne, à Bruxelles. Photo : Fred Romero, CC BY 2.0, via Wikimedia Commons, recadrée.",
                 "titre": "Réseaux sociaux et mineurs : Bruxelles gèle les projets nationaux",
                 "chapo": "L'Autriche voulait interdire les réseaux sociaux aux moins de 14 ans. La Commission européenne répond en reportant d'au moins un an tout projet national de ce type, le temps d'adopter une règle commune.",
                 "citation": ("Tous les enfants dans l'UE méritent le même niveau de sécurité en ligne.", "Thomas Regnier, porte-parole de la Commission européenne"),
@@ -552,7 +556,8 @@ ACTUS = [
             },
             {
                 "id": "philippe", "matiere": "Procédure pénale", "jour": "2026-10-29", "verdict": "Témoin assisté",
-                "mot": "Témoin assisté", "photo": None, "legende": "",
+                "mot": "Témoin assisté", "photo": "img/actu/2026-11-01-philippe.jpg",
+                "legende": "Édouard Philippe en 2017, alors Premier ministre. Photo : Nicolas Richoffer, CC BY-SA 4.0, via Wikimedia Commons, recadrée.",
                 "titre": "Édouard Philippe : témoin assisté, pas mis en examen",
                 "chapo": "Entendu toute une journée par deux juges d'instruction sur des soupçons de détournement de fonds publics au Havre, l'ancien Premier ministre ressort avec le statut de témoin assisté. Un statut intermédiaire, qu'il faut savoir distinguer de la mise en examen.",
                 "citation": ("Edouard Philippe se félicite de cette décision favorable qui confirme qu'il n'y a rien à lui reprocher dans cette affaire.", "Emmanuel Marsigny, avocat d'Édouard Philippe"),
