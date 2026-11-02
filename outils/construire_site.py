@@ -299,6 +299,11 @@ METHODES = [
         "resume": "Les sept éléments d'une introduction de dissertation juridique, celle que le correcteur lit en premier.",
         "points": ["L'accroche, jamais « depuis la nuit des temps »", "Les définitions et la délimitation du sujet", "Le contexte et l'intérêt du sujet", "La problématique et l'annonce du plan"],
     },
+    {
+        "id": "problematique", "url": "https://www.tiktok.com/@droitautableau/video/7703512888383769878", "titre": "Trouver une problématique en 30 secondes", "niveau": "L1", "dispo": True,
+        "resume": "La méthode du « mais », sur un sujet de L1 : « Le juge et la loi ». La phrase évidente, ce qui la contredit, une seule question. Et ton plan est déjà dedans.",
+        "points": ["Écrire la phrase évidente, celle que tout le monde dirait", "Ajouter « mais » et chercher ce qui la contredit", "En faire une seule question, avec les mots du sujet", "Le test : deux réponses défendables, sinon on recommence"],
+    },
 ]
 
 # Rythme de publication, affiché en haut de la page des cours.
@@ -306,12 +311,7 @@ RYTHME = "Un nouveau chapitre le mercredi et le dimanche à 13 h."
 
 # Annonce temporaire, en deuxième ligne du bouton YouTube de l'accueil et à la place du rythme sur la page des cours. Elle disparaît d'elle-même
 # chez le visiteur à la date « fin » (heure de Paris). None = pas d'annonce.
-ANNONCE = {
-    "etiquette": "Spécial galops",
-    "texte": "1 vidéo par jour",
-    "texte_cours": "Une vidéo par jour sur YouTube cette semaine.",
-    "fin": "2026-11-02T00:00:00+01:00",
-}
+ANNONCE = None
 
 # L'actu juridique de la semaine : une page par semaine (la plus récente en dernier).
 # Chaque actu : matiere (clé de COULEURS_ACTU), jour (date ISO), verdict (le tampon sur la photo),
@@ -841,7 +841,7 @@ def methodologie():
     {''.join(items)}
   </div>
 </section>"""
-    page("methodologie.html", "Méthodologie", "Les méthodes de la fiche d'arrêt, du commentaire d'arrêt, de la dissertation et de son introduction, du cas pratique et de l'utilisation du code civil en examen, montrées sur de vrais exemples.", contenu, "Méthodologie")
+    page("methodologie.html", "Méthodologie", "Les méthodes de la fiche d'arrêt, du commentaire d'arrêt, de la dissertation, de son introduction et de sa problématique, du cas pratique et de l'utilisation du code civil en examen, montrées sur de vrais exemples.", contenu, "Méthodologie")
 
 
 def insec(t):
