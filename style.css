@@ -244,7 +244,7 @@ button.copy { font: 500 14px var(--title); color: var(--fg); background: var(--a
 .weeks li:first-child { border-top: 0; padding-top: 0; }
 .weeks a { font: 600 19px var(--title); }
 
-/* Annonce temporaire (ex. : spécial galops), en deuxième ligne du bouton YouTube */
+/* Annonce temporaire, en deuxième ligne du bouton YouTube */
 .hero .link-btn.avec-annonce { flex-direction: column; gap: 3px; padding: 12px 16px 12px 58px; }
 .hero .link-btn.avec-annonce svg { top: calc(50% - 11px); }
 .annonce { display: block; font: 500 13px var(--text); color: #F6C9BE; }
